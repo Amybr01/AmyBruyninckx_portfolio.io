@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildernessssss</title>
+    <link rel="stylesheet" href="wilderness.css">
+
+</head>
+
+<body>
+
+    <div><a id="arrow" href="../../design.html">←</a></div>
+    <div class="sprite-animation" id="sprite-animation"></div>
+
+    <script>
+
+        
+        const spriteContainer = document.getElementById('sprite-animation');
+        const totalFrames = 5; 
+        let frameIndex = 0;
+        const frameHeight = 332; 
+
+        function animateSprite() {
+            frameIndex = (frameIndex + 1) % totalFrames;
+            const position = -frameIndex * frameHeight;
+            spriteContainer.style.backgroundPositionY = position + 'px';
+        }
+
+        setInterval(animateSprite, 500); 
+
+    </script>
+</body>
+
+</html>

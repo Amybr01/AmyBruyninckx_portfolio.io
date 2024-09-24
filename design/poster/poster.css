@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F3EDE7 ;
+    
+}
+
+.scene {
+    position: relative;
+    width: 600px;
+    height: 800px;
+    background-image: url(../../images/starry-sky-background-png-twinkling-stars-in-the-night-sky-loop-1920-544252397.png);
+}
+
+
+.bookshelf {
+    position: absolute;
+    top: -155px;
+    right: 350px;
+    width: 50px;
+    height: 300px;
+   
+ 
+}
+
+#arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px;
+    background-color: #c5cfb8;
+    color: #F3EDE7;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.shelf{
+    height: 400px;
+    width: 50px;
+}
+
+
+.book {
+    width: 10px;
+    height: 50px;
+    background-color: #ffa500;
+    border: 2px solid #cc8400;
+    border-radius: 5px;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+.book1 {
+    top: 60px;
+    left: 60px;
+    transform: rotate(0deg);
+}
+
+.book2 {
+    top: 60px;
+    left: 120px;
+    transform: rotate(-10deg);
+}
+
+.book3 {
+    top: 60px;
+    left: 180px;
+    transform: rotate(10deg);
+}
+
+.book4 {
+    top: 60px;
+    left: 240px;
+    transform: rotate(5deg);
+}
+
+.astronaut {
+    position: absolute;
+    bottom: 200;
+    left: 150px;
+    width: 150px;
+}
+
+.astronaut svg {
+    width: 100%;
+    bottom: 200;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(300px) rotate(720deg);
+    }
+}
+
+.morse {
+    animation: fall 1s forwards;
+}

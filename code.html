@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Amy Bruyninckx</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a id="logo" href="index.html"><img src="/images/Design_logo.png" alt=""></a>
+
+        <div class="navmenu">
+            <a href="photography.html">PHOTOGRAPHY</a>
+            <a href="design.html">DESIGN</a>
+            <a href="code.html">CODE</a>
+        </div>
+
+        <a id="btn" href="#">@email</a>
+
+    </div>
+
+    <div class="project-container">
+
+
+
+        <div>
+            <a href="/code/Challenge 1 - speech/index.html">
+                <div class="project">
+                    <img src="images/Speech.png" alt="Afbeelding">
+                    <h2>Speech quiz</h2>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a href="/code/Challenge 2 - track your body/index.html">
+                <div class="project">
+                    <img src="images/color .png" alt="Afbeelding">
+                    <h2>Color ninja</h2>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a href="/code/Challenge 3 - fotoherkening/index.html">
+                <div class="project">
+                    <img src="images/body.png" alt="Afbeelding">
+                    <h2>Body recognition</h2>
+                </div>
+            </a>
+        </div>
+
+
+        <div>
+            <a href="code/Challenge 4 - Motion/index.html">
+                <div class="project">
+                    <img src="images/Motion.png" alt="Afbeelding">
+                    <h2>Motion game</h2>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>@Amy_Bruyninckx</p>
+    </footer>
+
+
+    <script>
+        // streepje onder actieve pagina
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            if (path.includes('photography.html')) {
+                document.getElementById('photographyLink').classList.add('active');
+            } else if (path.includes('design.html')) {
+                document.getElementById('designLink').classList.add('active');
+            } else if (path.includes('code_index.html')) {
+                document.getElementById('codeLink').classList.add('active');
+            }
+        });
+    </script>
+
+</body>

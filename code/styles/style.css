@@ -1,0 +1,166 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #F3EDE7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 10px; 
+    background-color: #F3EDE7;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 5px;
+    flex-shrink: 0;
+    position: relative; 
+}
+
+.navmenu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0 10px; 
+}
+
+#btn {
+    background-color: #c5cfb8;
+    padding: 10px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    margin: 0 5px 0 0;
+    white-space: nowrap; 
+}
+
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #c5cfb8;
+}
+
+.welcome {
+    padding: 200px 48px 100px 48px;
+    text-align: center;
+}
+
+.content {
+    margin: 32px;
+}
+
+.content a {
+    text-decoration: none;
+    color: #333;
+    border: #c5cfb8 solid;
+    padding: 50px;
+    border-radius: 32px;
+    display: block;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #c5cfb8;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+   
+}
+
+#arrow{
+    padding: 10px;
+    max-width: 20px;
+}
+
+@media (max-width: 768px) {
+    .articles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    #photographyLink, #designLink {
+        display: none;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .left,
+.navbar .right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .left {
+    justify-content: flex-start;
+}
+
+.navbar .right {
+    justify-content: flex-end;
+}
+
+.navbar .center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar a {
+    padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        flex-wrap: nowrap; 
+    }
+
+    .navmenu {
+        justify-content: center;
+        width: auto; 
+        padding: 0 5px; 
+    }
+
+    #btn {
+        margin-bottom: 0;
+    }
+}
