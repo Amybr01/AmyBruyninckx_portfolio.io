@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Amy Bruyninckx</title>
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a id="logo" href="index.html"><img src="/images/Design_logo.png" alt=""></a>
+
+        <div class="navmenu">
+            <a href="photography.html">PHOTOGRAPHY</a>
+            <a href="design.html">DESIGN</a>
+            <a href="code.html">CODE</a>
+        </div>
+
+        <a id="btn" href="#">@email</a>
+    </div>
+
+    <header>
+        <div class="header-content">
+
+            <div class="head"><img src="/images/Amy.jpeg" alt=""></div>
+        </div>
+
+        <div class="header-links">
+            <a id="btn" href="photography.html">PHOTOGRAPHY</a>
+            <a id="btn" href="design.html">DESIGN</a>
+        </div>
+    </header>
+
+    <section class="rounded-section">
+        <div class="about ">
+            <h2>First, let me tell you a little bit more about myself</h2>
+            <p>My name is Amy Bruyninckx, and I am a passionate designer and photographer. I have always been fascinated
+                by the power of visuals and how they can convey stories and emotions. This passion led me to pursue a
+                career where I can blend creativity with technical skills to create impactful designs and stunning
+                photographs.</p>
+            <p>I chose this career because I believe in the magic of capturing moments and creating designs that
+                resonate with people. Every project I work on is a new adventure, a new challenge to express my
+                creativity and skills.</p>
+        </div>
+
+        <div class="bckgrnd"></div>
+
+        <div class="flex">
+            <p id="dynamic-word"><br></p>
+
+            <div class="dynamic"><img src="/images/dynamic.jpeg" alt=""></div>
+        </div>
+    </section>
+
+    <section class="promise">
+        <h2>What I promise to deliver</h2>
+        <p>As a professional, I promise to deliver work that is not only aesthetically pleasing but also functional and
+            tailored to your needs. My approach is client-centered, ensuring that each project meets your expectations
+            and goals.</p>
+        <p>Whether it is a design project or a photography session, my commitment is to excellence and creativity. I
+            strive to go beyond the ordinary to provide you with results that truly stand out.</p>
+        <p>Let’s create something amazing together.</p>
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">⬆</button>
+
+    <section class="projects rounded-section">
+        <h2>Latest</h2>
+        <p>Here are some of my latest works, showcasing my skills in design and photography. Each project reflects my
+            dedication to quality and creativity.
+        </p>
+
+        <div class="carrousel">
+            <p class="prev">←</p>
+            
+                <div id="placeholder"><img src="/images/portret17.jpg" alt=""></div>
+            
+            <p class="next">→</p>
+        </div>
+    </section>
+
+   
+
+  
+
+
+    <footer>
+        <p>@Amy_Bruyninckx</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const words = [
+                { text: "creative", color: "red" },
+                { text: "adventurous", color: "blue" },
+                { text: "passionate", color: "green" },
+                { text: "curious", color: "purple" },
+            ];
+            let index = 0;
+            const wordElement = document.getElementById("dynamic-word");
+
+            setInterval(() => {
+                wordElement.classList.add('roll-up');
+                setTimeout(() => {
+                    wordElement.textContent = words[index].text;
+                    wordElement.style.color = words[index].color;
+                    wordElement.classList.remove('roll-up');
+                }, 500);
+                index = (index + 1) % words.length;
+            }, 3000);
+        });
+
+        // script.js
+        // Wanneer de gebruiker naar beneden scrolt, laat de knop zien
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // Wanneer de gebruiker op de knop klikt, scroll naar de top van het document
+        document.getElementById("scrollTopBtn").onclick = function () {
+            scrollToTop();
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Carrousel script
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        const carousel = document.querySelector('.carousel-inner');
+        let counter = 0;
+        const size = carousel.clientWidth;
+
+        next.addEventListener('click', () => {
+            carousel.style.transition = "transform 0.4s ease-in-out";
+            counter++;
+            if (counter >= carousel.children.length) {
+                counter = 0;
+            }
+            carousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+
+        prev.addEventListener('click', () => {
+            carousel.style.transition = "transform 0.4s ease-in-out";
+            counter--;
+            if (counter < 0) {
+                counter = carousel.children.length - 1;
+            }
+            carousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
