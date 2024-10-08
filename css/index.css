@@ -51,18 +51,15 @@ body {
     color: #333;
 }
 
-
-
 /* Header styling */
 header {
     padding-top: 200px;
     padding-left: 32px;
-    padding-right: 32px; text-align: center;
+    padding-right: 32px; 
+    text-align: center;
 }
 
-.head img{
-
-   
+.head img {
     max-width: 90%;
     border-radius: 8px;
 }
@@ -71,28 +68,24 @@ header {
     display: flex;
 }
 
-header a{
+header a {
     gap: 100px;
 }
 
 .header-links {
     padding: 80px 0;
     text-align: center;
-    
-    
 }
 
-
-
-
+/* Image Placeholder Styling */
 #placeholder img {
     text-align: center;
-    max-width: 100%; /* Stel de maximale breedte van de afbeelding in op 100% van de beschikbare ruimte */
-    height: auto; /* Behoud de aspectverhouding van de afbeelding */
+    max-width: 100%; 
+    height: auto;
     border-radius: 16px;
 }
 
-/* Sections INDEX */
+/* Section Styling */
 .rounded-section {
     border: 1px solid #ccc;
     border-radius: 15px;
@@ -118,6 +111,53 @@ h2 {
     cursor: pointer;
     color: blue;
     text-decoration: underline;
+}
+
+/* Project Container Styling */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+    padding-top: 200px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.project h2 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Adjust grid for small screens */
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px); /* Adjusts to two per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .project {
+        width: calc(100% - 20px); /* Full width for each project on very small screens */
+    }
 }
 
 /* Carousel styling */
@@ -154,19 +194,18 @@ h2 {
     right: 0;
 }
 
-
-
+/* Font-face for custom fonts */
 @font-face {
     font-family: 'Larosh'; 
-    src: url('../fonts/LAROSH\ Sithal\ Signature.ttf') format('truetype'), 
+    src: url('../fonts/LAROSH\ Sithal\ Signature.ttf') format('truetype');
 }
+
 /* Dynamic word styling */
 #dynamic-word {
     font-size: 1.4em;
     font-weight: light;
     font-family: 'Larosh';
     display: inline-block;
-    
 }
 
 /* Scroll to top button styling */
@@ -190,11 +229,10 @@ h2 {
     background-color: #555;
 }
 
-/* Photography page specific styling */
+/* Photography specific page styling */
 #logo img {
     width: 120px; 
     height: auto;
-
 }
 
 .photo img {
@@ -202,16 +240,6 @@ h2 {
     height: auto;
     opacity: 90%;
     border-radius: 32px;
-}
-
-.navbar a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: #c5cfb8;
 }
 
 .photo {
@@ -222,18 +250,16 @@ h2 {
     opacity: 90%;
     width: 100%; 
     height: 70vh;
-    
 }
 
-/*landschap*/
-
+/* Slider for landscape */
 .slider {
     width: 100%;
     margin: 10 auto;
     overflow: hidden;
 }
 
-.slider img{
+.slider img {
     border-radius: 8px;
 }
 
@@ -246,7 +272,6 @@ h2 {
 .slider-row {
     display: flex;
     align-items: center;
-    
     margin: 20px 0;
 }
 
@@ -257,19 +282,16 @@ h2 {
 }
 
 .slider-row img {
-    
     width: 19%; 
     margin: 2% 5px;
 }
 
 .slider-row.small img {
-    justify-content: center;
     width: calc(93% / 6); 
     margin: 0 5px;
 }
 
-/*portret*/
-
+/* Collage for portrait and landscape */
 .collage {
     display: flex;
     flex-direction: column;
@@ -330,107 +352,7 @@ h2 {
     height: auto;
 }
 
-
-
-
-/*DESIGN*/
-
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-top: 200px;
-    justify-content: center; 
-    align-items: center; 
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-
-    width: 200px; 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    background-color: #f9f9f9;
-    
-    
-    margin: 48px;
-    
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project h2 {
-    margin-top: 10px;
-    font-size: 16px;
-    
-}
-
-.journey{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: #c5cfb8;
-    font-style: italic;
-    margin-top: -30px;
-
-    margin-bottom: 9%;
-}
-
-.flex{
-    display: flex;
-    gap: 30%;
-    
-}
-
-
-.dynamic img {
-    border-radius: 10px;
-    max-width: 200px;
-    height: auto;
-    opacity: 0.8;
-    margin-top: 20px;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#dynamic-word {
-    margin-top: 20px;
-    
-}
-
-@media (min-width: 768px) {
-    .about{
-        flex-direction: column;
-        align-items: center;
-        max-width: 40%;
-    }
-
-    .dynamic img {
-       position:static;
-       max-width: 200px
-    
-        
-    }
-
-    #dynamic-word {
-        margin-top: 10px;
-        margin-bottom: 100px;
-    }
-}
-
+/* Footer styling */
 footer {
     background-color: #c5cfb8;
     padding: 20px;
@@ -440,51 +362,12 @@ footer {
     box-sizing: border-box;
 }
 
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: row;
-        flex-wrap: nowrap; 
-    }
-
-    .navmenu {
-        justify-content: center;
-        width: auto; 
-        padding: 0 5px; 
-    }
-
-    #btn {
-        margin-bottom: 0;
-    }
-}
-
-
-@media (min-width: 900px) {
-    .navbar {
-        width: 97%;
-    }
-
-    footer{
-        margin-top: 290px;
-        
-    }
-
-    .head img{
-
-   
-        max-width: 60%;
-        border-radius: 8px;
-    }
-
-
-}
-
-
+/* Responsive adjustments */
 @media (max-width: 600px) {
     .navbar {
         flex-direction: row;
         align-items: center; 
-        padding: 10px; 
+        padding: 10px;
         font-size: smaller;
     }
 
@@ -494,17 +377,29 @@ footer {
 
     .navmenu {
         flex-direction: row; 
-        padding: 10px 0; 
+        padding: 10px 0;
     }
 
     .navbar a {
-        padding: 5px; 
+        padding: 5px;
     }
 
     #btn {
-        padding: 8px 15px; 
+        padding: 8px 15px;
     }
 }
 
+@media (min-width: 900px) {
+    .navbar {
+        width: 97%;
+    }
 
+    footer {
+        margin-top: 290px;
+    }
 
+    .head img {
+        max-width: 60%;
+        border-radius: 8px;
+    }
+}
