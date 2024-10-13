@@ -1,23 +1,37 @@
-/* General body styling */
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F3EDE7;
+    box-sizing: border-box;
 }
 
-/* Navbar styling */
+.selected-work, .rounded-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 30px 18px;
+
     background-color: #F3EDE7;
-    width: 95%;
+    max-width: 100%;
+    /* Zorg ervoor dat de navbar de volle breedte heeft */
     z-index: 3;
+    /* Zorg ervoor dat de navbar boven andere elementen staat */
     position: fixed;
+    /* Houd de navbar op een vaste positie */
     justify-content: space-between;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Dropshadow */
 }
+
+
 
 .navbar a {
     text-decoration: none;
@@ -51,57 +65,262 @@ body {
     color: #333;
 }
 
+
 /* Header styling */
 header {
-    padding-top: 200px;
-    padding-left: 32px;
-    padding-right: 32px; 
-    text-align: center;
-}
-
-.head img {
-    max-width: 90%;
-    border-radius: 8px;
+    position: relative;
+    /* Zorgt ervoor dat de header content en links goed worden gepositioneerd */
 }
 
 .header-content {
     display: flex;
+    /* Flexbox voor een nette indeling */
+    justify-content: space-between;
+    /* Ruimte tussen de text en het hoofd gedeelte */
+    align-items: center;
+    /* Zorg ervoor dat items verticaal gecentreerd zijn */
+    height: 100vh;
+    /* Volledige hoogte van de viewport */
+
 }
 
-header a {
-    gap: 100px;
+.text {
+    z-index: 2;
+    /* Zorgt ervoor dat tekst boven de achtergrondafbeelding staat */
+    color: #333;
+    /* Tekstkleur */
+    text-align: left;
+    /* Tekst uitlijnen naar links */
+}
+
+.quote {
+    padding: 5px 5px;
+    /* Ruimte boven en onder de quote */
+    font-size: 32px;
+    /* Grootte van de quotes */
+    color: #333;
+    /* Kleur van de quotes */
+    font-style: italic;
+    /* Schriftstijl van de quotes */
+    font-weight: lighter;
+    position: relative;
+    /* Voor positionering van de pseudo-elementen */
+
+}
+
+/* Toevoegen van een gemarkeerd effect onder de quote */
+.quote::after {
+    content: '';
+    /* Maakt het pseudo-element */
+    position: absolute;
+    /* Absoluut gepositioneerd onder de quote */
+    bottom: 0;
+    /* Plaatst het aan de onderkant van de quote */
+    left: 20px;
+    /* Start vanaf de linkerkant */
+    right: -20px;
+    /* Eindigt aan de rechterkant */
+    height: 20px;
+    /* Dikte van de markering */
+    opacity: 40%;
+    background-color: #c5cfb8;
+    /* Kleur van de markering */
+    z-index: 1;
+}
+
+
+.begin {
+    padding: 0px 100px;
+    font-size: 64px;
+    /* Grootte van de beginknop */
+    color: #333;
+    /* Kleur van de beginknop */
+    text-decoration: none;
+    /* Geen underline */
+}
+
+.begin p {
+    font-size: 32px;
+    margin-left: 100px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.head {
+    background-image: url(../images/IMG_2732\ copy.webp);
+    background-size: contain;
+    /* Zorgt dat de achtergrondafbeelding goed wordt weergegeven */
+    background-position: right top;
+    /* Afbeelding rechtsboven positioneren */
+    background-repeat: no-repeat;
+    /* Voorkom herhaling van de afbeelding */
+    opacity: 0.85;
+    /* Transparantie instellen */
+    width: 100%;
+    height: 100vh;
+    /* Volledige hoogte van de viewport */
+    position: absolute;
+    /* Achtergrondafbeelding positioneren */
+    top: 0;
+    /* Bovenaan uitlijnen */
+    right: 0;
+    /* Rechts uitlijnen */
+    z-index: 1;
+    /* Zorg ervoor dat het achter de tekst komt */
 }
 
 .header-links {
-    padding: 80px 0;
     text-align: center;
+    /* Center de knoppen onder de header */
+    padding: 20px 0;
+    /* Optionele padding voor ruimte boven en onder de knoppen */
 }
 
-/* Image Placeholder Styling */
+.header-links a {
+    margin: 0 15px;
+    /* Ruimte tussen de knoppen */
+    padding: 10px 20px;
+    /* Padding voor de knoppen */
+    background-color: #c5cfb8;
+    /* Achtergrondkleur van de knoppen */
+    color: #333;
+    /* Tekstkleur van de knoppen */
+    text-decoration: none;
+    /* Geen onderstreping */
+    border-radius: 8px;
+    /* Ronde hoeken voor knoppen */
+}
+
+
+
+
+/* Image placeholder styling 
 #placeholder img {
     text-align: center;
-    max-width: 100%; 
+    max-width: 100%;        
     height: auto;
     border-radius: 16px;
-}
+}*/
 
-/* Section Styling */
-.rounded-section {
-    border: 1px solid #ccc;
-    border-radius: 15px;
+.work {
     background-color: #f9f9f9;
-    margin: 20px 0;
+    height: 800px;
 }
 
-section {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
+/* Section styling */
+.rounded-section {
+    border-radius: 4px;
+    padding: 40px;
+    /* Mobile padding */
+    display: flex;
+    flex-direction: column;
+    /* Stacks content vertically on mobile */
+    gap: 20px;
+    /* Space between items */
 }
 
 h2 {
     color: #333;
 }
 
+/* Dynamic word */
+#dynamic-word {
+    font-size: 1.4em;
+    font-weight: light;
+    font-family: 'Larosh';
+    display: inline-block;
+}
+
+/* Flex container for mobile view */
+.flex {
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    gap: 20px;
+}
+
+.dynamic img {
+
+    width: 100%;
+    /* Image takes full width on mobile */
+
+    border-radius: 16px;
+}
+
+
+/*WORK SECTION*/
+.selected-work {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    padding: 100px 20px;
+    height: 900px;
+}
+.selected-work {
+    padding: 20px;
+    text-align: center;
+}
+
+.selected-work h2 {
+    font-size: 2rem;
+    margin-bottom: 250px;
+    margin-bottom: 40px; 
+    padding-top: 100px; 
+}
+
+.work-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+   
+}
+
+.work-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+}
+
+.work-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.work-item p {
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+.btn .work-item{
+    padding: 20px;
+}
+
+.work-item:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    transition: transform 0.3s ease;
+}
+
+
+
+/*================================================================*/
+
+.paint{
+   padding : 200px 0 0 48px;
+   
+}
+
+
+/* Project Categories Styling */
 .project-categories {
     display: flex;
     justify-content: space-around;
@@ -118,7 +337,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; 
+    justify-content: center;
     padding-top: 200px;
 }
 
@@ -147,20 +366,7 @@ h2 {
     font-size: 16px;
 }
 
-/* Adjust grid for small screens */
-@media (max-width: 768px) {
-    .project {
-        width: calc(50% - 20px); /* Adjusts to two per row on smaller screens */
-    }
-}
-
-@media (max-width: 600px) {
-    .project {
-        width: calc(100% - 20px); /* Full width for each project on very small screens */
-    }
-}
-
-/* Carousel styling */
+/* Carousel Styling */
 .carrousel {
     display: flex;
     align-items: center;
@@ -194,21 +400,14 @@ h2 {
     right: 0;
 }
 
-/* Font-face for custom fonts */
+/* Custom font */
 @font-face {
-    font-family: 'Larosh'; 
+    font-family: 'Larosh';
     src: url('../fonts/LAROSH\ Sithal\ Signature.ttf') format('truetype');
 }
 
-/* Dynamic word styling */
-#dynamic-word {
-    font-size: 1.4em;
-    font-weight: light;
-    font-family: 'Larosh';
-    display: inline-block;
-}
 
-/* Scroll to top button styling */
+/* Scroll-to-Top Button */
 #scrollTopBtn {
     display: none;
     position: fixed;
@@ -229,9 +428,9 @@ h2 {
     background-color: #555;
 }
 
-/* Photography specific page styling */
+/* Photography Page Styling */
 #logo img {
-    width: 120px; 
+    width: 120px;
     height: auto;
 }
 
@@ -244,15 +443,15 @@ h2 {
 
 .photo {
     background-image: url(../images/whitepocket.webp);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 90%;
-    width: 100%; 
-    height: 70vh;
+    opacity: 85%;
+    width: 100vw;
+    height: 950px;
 }
 
-/* Slider for landscape */
+/* Slider Styling */
 .slider {
     width: 100%;
     margin: 10 auto;
@@ -282,16 +481,16 @@ h2 {
 }
 
 .slider-row img {
-    width: 19%; 
+    width: 19%;
     margin: 2% 5px;
 }
 
 .slider-row.small img {
-    width: calc(93% / 6); 
+    width: calc(93% / 6);
     margin: 0 5px;
 }
 
-/* Collage for portrait and landscape */
+/* Collage Styling */
 .collage {
     display: flex;
     flex-direction: column;
@@ -302,7 +501,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.collage h1 {
+.photography h2 {
     text-align: center;
     margin-top: 10%;
     margin-bottom: 5%;
@@ -328,55 +527,123 @@ h2 {
     object-fit: cover;
 }
 
-.landscape {
-    flex: 1 1 calc(30% - 10px);
-    max-width: calc(30% - 10px);
-    height: auto;
+/* Photo Gallery Container */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+    box-sizing: border-box;
+    background-color: #F3EDE7;
 }
 
-.portrait {
-    flex: 1 1 calc(20% - 10px);
-    max-width: calc(20% - 10px);
-    height: auto;
+/* Photo Grid Styling */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 kolom voor mobiele weergave */
+    gap: 15px;
+    /* Gap voor mobiele weergave */
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
-.big {
-    flex: 1 1 calc(40% - 10px);
-    max-width: calc(40% - 10px);
-    height: auto;
+.photo-item {
+    position: relative;
+    background-color: #D3D3D3;
+    padding-bottom: 100%;
+    /* Aspect ratio 1:1 (vierkant) */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.little {
-    flex: 1 1 calc(15% - 10px);
-    max-width: calc(15% - 10px);
-    height: auto;
+.photo-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
+.photo-item:hover {
+    opacity: 0.6;
+    /* Verklein de afbeelding bij hover */
+}
+
+.photo-item .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Vloeiende overgang */
+    text-align: center;
+}
+
+.photo-item:hover .overlay-text {
+    opacity: 1;
+    /* Toon de tekst bij hover */
+}
+
+/* Sticker styling */
+.sticker {
+    position: absolute;
+    /* Maak de sticker absoluut gepositioneerd */
+    top: -25%;
+    /* Plaats de sticker zo dat deze boven de foto uitsteekt */
+    left: 15%;
+    /* Pas deze waarde aan afhankelijk van waar je het wilt hebben */
+    width: 10px;
+    /* Pas de grootte aan indien nodig */
+    height: 20px;
+    /* Houd de verhoudingen van de sticker */
+    z-index: 2;
+    /* Zorg ervoor dat de sticker boven de afbeelding staat */
+    transform: translateY(-50%);
+    /* Dit zorgt ervoor dat de sticker iets omhoog wordt getrokken */
+}
+
+
 
 /* Footer styling */
+
 footer {
     background-color: #c5cfb8;
     padding: 20px;
     text-align: center;
-    margin-top: auto;
     width: 100%;
+    /* Zorg ervoor dat de footer de volle breedte heeft */
     box-sizing: border-box;
+    /* Inclusief padding en margin in de breedte */
+
+    bottom: 0;
+    /* Plaats de footer aan de onderkant */
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
+
+/* Responsive Adjustments (Media Queries) */
+/* Max-width 600px */
+@media (min-width: 600px) {
     .navbar {
         flex-direction: row;
-        align-items: center; 
+        align-items: center;
         padding: 10px;
         font-size: smaller;
+        width: 98%;
     }
 
     #logo img {
-        width: 70px; 
+        width: 70px;
     }
 
     .navmenu {
-        flex-direction: row; 
+        flex-direction: row;
         padding: 10px 0;
     }
 
@@ -387,11 +654,84 @@ footer {
     #btn {
         padding: 8px 15px;
     }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolommen op kleinere schermen */
+        gap: 20px;
+        /* Aanpassen van de gap voor kleinere schermen */
+    }
+
+    .rounded-section {
+        flex-direction: row;
+        /* Align content side by side */
+        justify-content: space-between;
+        padding: 200px 48px;
+        align-items: center;
+        /* Zorg ervoor dat items verticaal gecentreerd zijn */
+    }
+
+    .flex {
+        flex-direction: column;
+        /* Keep the "dynamic word" under the text */
+        justify-content: flex-start;
+        align-items: flex-end;
+        /* Align the text and dynamic word to the right */
+        max-width: 60%;
+        gap: 20px;
+    }
+
+    .dynamic {
+
+        width: 80%;
+        /* The image takes 50% of the space */
+
+    }
+
+    .about {
+        max-width: 50%;
+        /* Text area takes 50% of the space */
+        font-size: larger;
+
+    }
+
+    .work-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+        margin: 48px;
+       
+        
+    }
+    
+    .work-item {
+        width: 90%;
+        
+    }
+    
+    .work-item img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+
 }
 
-@media (min-width: 900px) {
+
+
+/* Min-width 900px */
+@media (min-width: 1100px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 kolommen op grote schermen */
+        gap: 40px;
+        /* Vergrote gap tussen de items */
+        max-width: 1500px;
+    }
+
     .navbar {
-        width: 97%;
+        width: 99%;
+
     }
 
     footer {
@@ -402,4 +742,41 @@ footer {
         max-width: 60%;
         border-radius: 8px;
     }
+
+    .rounded-section {
+        flex-direction: row;
+        /* Horizontale weergave voor grotere schermen */
+        justify-content: space-between;
+        /* Ruimte tussen de elementen */
+        padding: 48px 24px;
+        /* Aanpassen van padding voor bredere schermen */
+    }
+
+    .about {
+        width: 60%;
+        /* 60% van de breedte voor de tekst */
+    }
+
+    .flex {
+        flex-direction: column;
+        /* Houd de afbeelding en dynamische tekst verticaal */
+        align-items: flex-end;
+        /* Align afbeelding naar rechts */
+        width: 30%;
+        /* 30% van de breedte voor de afbeelding */
+    }
+
+    .rounded-section {
+        flex-direction: row;
+       
+        justify-content: space-between;
+        height: 800px;
+    }
+
+    .dynamic img {
+        max-width: 400px;
+        
+    }
+
+    
 }
