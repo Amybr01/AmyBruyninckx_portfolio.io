@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="fonts/font.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <link rel="stylesheet" href="https://use.typekit.net/osw2ogp.css">
+
 </head>
 
 <body>
@@ -24,30 +26,35 @@
         <a id="btn" href="#">@email</a>
     </div>
     <header>
+        <div class="head"></div> <!-- Background image -->
         <div class="header-content">
             <div class="text">
-                <h3 class="quote">"Your dreams are your wings. Use them to soar." – Anonymous</h3>
-               
-                <h1 class="begin">Hi, I'm Amy.<br>
-                <!--
-                    <p>an UI/UIX designer</p>
-                   <p> a graphic designer</p>
-                    <p>a dreamer</p>-->
-                </h1>
-                <div class="header-links"> <!-- Knoppen in een aparte div binnen de .text -->
-                    <a id="btn" href="photography.html">PHOTOGRAPHY</a>
-                    <a id="btn" href="design.html">DESIGN</a>
-                </div>
+                <h1 class="begin">Hi, I'm Amy.</h1>
             </div>
-            <div class="head"></div>
+            <div class="header-links">
+                <a id="btn" href="photography.html">PHOTOGRAPHY</a>
+                <a id="btn" href="design.html">DESIGN</a>
+            </div>
+           
         </div>
+        <h3 class="quote">"Your dreams are your wings. Use them to soar." – Anonymous</h3>
     </header>
+    
+    
     
 
 
     <section class="selected-work">
-        <h2>Selected Work</h2>
+        <h2>Selected work</h2>
+        
         <div class="work-items">
+            <div class="work-item">
+                <img src="/images/portret_extra3.webp" alt="Project 2">
+                <h3>Photography</h3>
+                <p>Description of project 2. You can customize this text.</p>
+                <a id="btn" href="/design/Typemachine/index.html">Open project</a>
+            </div>
+
             <div class="work-item">
                 <img src="/images/typemachine.png" alt="Typemachine">
                 <h3>Useless Website</h3>
@@ -60,30 +67,17 @@
                 <p>Description of project 2. You can customize this text.</p>
                 <a id="btn" href="/design/Typemachine/index.html">Open project</a>
             </div>
-            <div class="work-item">
-                <img src="your-image3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of project 3. You can customize this text.</p>
-                <a id="btn" href="/design/Typemachine/index.html">Open project</a>
-            </div>
         </div>
     </section>
     
-    
-
     <section class="rounded-section">
         <div class="about">
             <h2>What I am all about</h2>
-            <p>My name is Amy Bruyninckx, and I am a passionate designer and photographer. I have always been fascinated
-                by the power of visuals and how they can convey stories and emotions. This passion led me to pursue a
-                career where I can blend creativity with technical skills to create impactful designs and stunning
-                photographs.</p>
-            <p>I chose this career because I believe in the magic of capturing moments and creating designs that
-                resonate with people. Every project I work on is a new adventure, a new challenge to express my
-                creativity and skills.</p>
+            <p>My name is Amy Bruyninckx, and I am a passionate designer and photographer. I have always been fascinated by the power of visuals and how they can convey stories and emotions. This passion led me to pursue a career where I can blend creativity with technical skills to create impactful designs and stunning photographs.</p>
+            <p>I chose this career because I believe in the magic of capturing moments and creating designs that resonate with people. Every project I work on is a new adventure, a new challenge to express my creativity and skills.</p>
             <p id="dynamic-word"><br></p>
         </div>
-    
+        
         <div class="flex">
             <div class="dynamic">
                 <img src="images/dynamic.jpeg" alt="Dynamic image">
@@ -92,25 +86,10 @@
     </section>
     
     
+    
 
    
 
-    <button id="scrollTopBtn" title="Go to top">⬆</button>
-
-    <!--<section class="projects rounded-section">
-        <h2>Latest</h2>
-        <p>Here are some of my latest works, showcasing my skills in design and photography. Each project reflects my
-            dedication to quality and creativity.
-        </p>
-
-        <div class="carrousel">
-            <p class="prev">←</p>
-
-            <div id="placeholder"><img src="images/portret17.jpg" alt=""></div>
-
-            <p class="next">→</p>
-        </div>
-    </section>-->
 
 
 
@@ -143,29 +122,6 @@
             }, 3000);
         });
 
-        // script.js
-        // Wanneer de gebruiker naar beneden scrolt, laat de knop zien
-        window.onscroll = function () {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            const scrollTopBtn = document.getElementById("scrollTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
-        }
-
-        // Wanneer de gebruiker op de knop klikt, scroll naar de top van het document
-        document.getElementById("scrollTopBtn").onclick = function () {
-            scrollToTop();
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
        
     </script>

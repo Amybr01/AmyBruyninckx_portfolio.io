@@ -1,16 +1,19 @@
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'richmond-display', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F3EDE7;
     box-sizing: border-box;
 }
 
-.selected-work, .rounded-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+/* Custom font */
+@font-face {
+    font-family: 'Larosh';
+    src: url('../fonts/LAROSH\ Sithal\ Signature.ttf') format('truetype');
 }
+
 
 /* Navbar Styling */
 .navbar {
@@ -65,132 +68,106 @@ body {
     color: #333;
 }
 
+/*----------------------------------------------------------------*/
+
 
 /* Header styling */
 header {
     position: relative;
-    /* Zorgt ervoor dat de header content en links goed worden gepositioneerd */
+    padding: 0; /* Geen padding voor de header */
+    text-align: center; /* Centraal uitlijnen voor header */
 }
 
+/* Background image section */
+.head {
+    background-image: url(../images/header_mobile.webp); /* Mobile-specific background */
+    background-size: cover; /* Zorgt ervoor dat de image de hele ruimte inneemt */
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    width: 100%; /* Gebruik volledige breedte */
+    height: 65vh; /* Hoogte aanpassen voor mobile */
+    
+}
+
+/* Content below the image */
 .header-content {
+    position: absolute; /* Absoluut gepositioneerd om de inhoud boven de afbeelding te plaatsen */
+    bottom: 20px; /* Plaatst de inhoud iets boven de onderkant van de afbeelding */
+    left: 20px; /* Afstand van de linkerzijde */
+    right: 20px; /* Afstand van de rechterzijde */
+    z-index: 2; /* Hogere z-index om boven de afbeelding te komen */
     display: flex;
-    /* Flexbox voor een nette indeling */
-    justify-content: space-between;
-    /* Ruimte tussen de text en het hoofd gedeelte */
-    align-items: center;
-    /* Zorg ervoor dat items verticaal gecentreerd zijn */
-    height: 100vh;
-    /* Volledige hoogte van de viewport */
-
+    flex-direction: column; /* Zorg ervoor dat alles onder elkaar komt */
+    
 }
 
+/* Text content */
 .text {
     z-index: 2;
-    /* Zorgt ervoor dat tekst boven de achtergrondafbeelding staat */
     color: #333;
-    /* Tekstkleur */
-    text-align: left;
-    /* Tekst uitlijnen naar links */
+    text-align: left; /* Links uitlijnen */
+    margin-bottom: 10px; /* Ruimte tussen h1 en knoppen */
 }
-
-.quote {
-    padding: 5px 5px;
-    /* Ruimte boven en onder de quote */
-    font-size: 32px;
-    /* Grootte van de quotes */
-    color: #333;
-    /* Kleur van de quotes */
-    font-style: italic;
-    /* Schriftstijl van de quotes */
-    font-weight: lighter;
-    position: relative;
-    /* Voor positionering van de pseudo-elementen */
-
-}
-
-/* Toevoegen van een gemarkeerd effect onder de quote */
-.quote::after {
-    content: '';
-    /* Maakt het pseudo-element */
-    position: absolute;
-    /* Absoluut gepositioneerd onder de quote */
-    bottom: 0;
-    /* Plaatst het aan de onderkant van de quote */
-    left: 20px;
-    /* Start vanaf de linkerkant */
-    right: -20px;
-    /* Eindigt aan de rechterkant */
-    height: 20px;
-    /* Dikte van de markering */
-    opacity: 40%;
-    background-color: #c5cfb8;
-    /* Kleur van de markering */
-    z-index: 1;
-}
-
 
 .begin {
-    padding: 0px 100px;
-    font-size: 64px;
-    /* Grootte van de beginknop */
+    font-size: 36px; /* Font size for h1 */
     color: #333;
-    /* Kleur van de beginknop */
-    text-decoration: none;
-    /* Geen underline */
+   
 }
 
-.begin p {
-    font-size: 32px;
-    margin-left: 100px;
-    font-style: italic;
-    font-weight: normal;
-}
-
-.head {
-    background-image: url(../images/IMG_2732\ copy.webp);
-    background-size: contain;
-    /* Zorgt dat de achtergrondafbeelding goed wordt weergegeven */
-    background-position: right top;
-    /* Afbeelding rechtsboven positioneren */
-    background-repeat: no-repeat;
-    /* Voorkom herhaling van de afbeelding */
-    opacity: 0.85;
-    /* Transparantie instellen */
-    width: 100%;
-    height: 100vh;
-    /* Volledige hoogte van de viewport */
-    position: absolute;
-    /* Achtergrondafbeelding positioneren */
-    top: 0;
-    /* Bovenaan uitlijnen */
-    right: 0;
-    /* Rechts uitlijnen */
-    z-index: 1;
-    /* Zorg ervoor dat het achter de tekst komt */
-}
-
+/* Buttons under the quote */
 .header-links {
-    text-align: center;
-    /* Center de knoppen onder de header */
-    padding: 20px 0;
-    /* Optionele padding voor ruimte boven en onder de knoppen */
+    margin-top: 20px; /* Ruimte boven de knoppen */
+    text-align: center; /* Centraal uitlijnen */
+    margin-bottom: 100px;
 }
 
 .header-links a {
-    margin: 0 15px;
-    /* Ruimte tussen de knoppen */
-    padding: 10px 20px;
-    /* Padding voor de knoppen */
+    display: inline-block;
+    margin: 0 10px; /* Ruimte tussen de knoppen */
+    padding: 15px 30px; /* Padding voor knoppen */
     background-color: #c5cfb8;
-    /* Achtergrondkleur van de knoppen */
     color: #333;
-    /* Tekstkleur van de knoppen */
     text-decoration: none;
-    /* Geen onderstreping */
     border-radius: 8px;
-    /* Ronde hoeken voor knoppen */
 }
 
+
+/* Quote styling */
+.quote {
+    
+    margin-left: 5%; /* NOG FIXEN 
+    font-size: 20px; /* Smaller font size for mobile */
+    color: #333;
+    font-style: italic;
+    font-weight: lighter;
+    max-width: 83%; /* Constrain width to break lines on smaller screens */
+    position: relative; /* Needed for the ::after pseudo-element */
+    z-index: 1; /* Ensure the quote stays above the mark */
+    padding-bottom: 20px;
+    
+    
+}
+
+/* Add the highlighted effect under the quote */
+.quote::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Boven de quote plaatsen */
+    left: 15px; /* Align met de tekst */
+    right: -10px; /* Span de breedte van de tekst */
+    height: 10px; /* Small height for the highlight */
+    background-color: #c5cfb8;
+    opacity: 0.4;
+    z-index: -1; /* Plaats het achter de tekst */
+}
+
+
+
+
+
+/*----------------------------------------------------------------*/
 
 
 
@@ -202,21 +179,78 @@ header {
     border-radius: 16px;
 }*/
 
+
+/* WORK SECTION */
 .work {
     background-color: #f9f9f9;
-    height: 800px;
+    height: auto; /* Hoogte automatisch laten aanpassen */
 }
 
-/* Section styling */
+.selected-work {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Header for Selected Work */
+.selected-work h2 {
+    font-size: 2rem;
+    margin-bottom: 40px; 
+     
+}
+
+/*.selected-work, .rounded-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}*/
+
+
+
+.work-items {
+    display: flex;
+    flex-direction: column; /* Zorg ervoor dat items onder elkaar komen */
+    gap: 30px; /* Ruimte tussen de werkitems */
+    
+}
+
+/* Work Item */
+.work-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.work-item img {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 250px; /* Stel een vaste hoogte in voor alle afbeeldingen */
+    object-fit: cover;
+}
+
+.work-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.work-item p {
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+
+
+
+/* Rounded Section */
 .rounded-section {
     border-radius: 4px;
     padding: 40px;
-    /* Mobile padding */
     display: flex;
     flex-direction: column;
-    /* Stacks content vertically on mobile */
-    gap: 20px;
-    /* Space between items */
+    gap: 20px; /* Ruimte tussen items */
 }
 
 h2 {
@@ -234,81 +268,16 @@ h2 {
 /* Flex container for mobile view */
 .flex {
     display: flex;
-    flex-direction: column;
-    /* Stack content vertically */
-    gap: 20px;
+    flex-direction: column; /* Stacks content vertically */
+    gap: 20px; /* Space between items */
 }
 
 .dynamic img {
-
-    width: 100%;
-    /* Image takes full width on mobile */
-
+    width: 100%; /* Image takes full width on mobile */
     border-radius: 16px;
 }
 
 
-/*WORK SECTION*/
-.selected-work {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-    padding: 100px 20px;
-    height: 900px;
-}
-.selected-work {
-    padding: 20px;
-    text-align: center;
-}
-
-.selected-work h2 {
-    font-size: 2rem;
-    margin-bottom: 250px;
-    margin-bottom: 40px; 
-    padding-top: 100px; 
-}
-
-.work-items {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-   
-}
-
-.work-item {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
-}
-
-.work-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    
-}
-
-.work-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.work-item p {
-    font-size: 1rem;
-    padding: 10px 0;
-}
-
-.btn .work-item{
-    padding: 20px;
-}
-
-.work-item:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    transition: transform 0.3s ease;
-}
 
 
 
@@ -400,33 +369,8 @@ h2 {
     right: 0;
 }
 
-/* Custom font */
-@font-face {
-    font-family: 'Larosh';
-    src: url('../fonts/LAROSH\ Sithal\ Signature.ttf') format('truetype');
-}
 
 
-/* Scroll-to-Top Button */
-#scrollTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-#scrollTopBtn:hover {
-    background-color: #555;
-}
 
 /* Photography Page Styling */
 #logo img {
@@ -627,9 +571,9 @@ footer {
 }
 
 
-/* Responsive Adjustments (Media Queries) */
-/* Max-width 600px */
-@media (min-width: 600px) {
+/*----------------------------------------------------------------------*/
+/* Min-width: 700px */
+@media (min-width: 700px) {
     .navbar {
         flex-direction: row;
         align-items: center;
@@ -655,12 +599,60 @@ footer {
         padding: 8px 15px;
     }
 
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 kolommen op kleinere schermen */
-        gap: 20px;
-        /* Aanpassen van de gap voor kleinere schermen */
+
+    .head {
+        height: 100vh; /* Increase height for tablets */
+        background-size: cover;
     }
+   
+    .begin {
+        font-size: 48px; /* Grotere tekst voor h1 op tablet */
+    }
+
+    .header-content {
+        position: absolute; /* Absoluut gepositioneerd om de inhoud boven de afbeelding te plaatsen */
+        bottom: 10%; /* Verplaatst de inhoud hoger in de header */
+        gap: 30px;
+        z-index: 2; /* Hogere z-index om boven de afbeelding te komen */
+    }
+    
+    
+
+    .quote {
+        margin-top: 50px; /* Verminder ruimte boven de quote om deze dichter bij de knoppen te plaatsen */
+        text-align: center; /* Centreren van de quote */
+        font-size: 28px; /* Larger font size for tablets */
+        max-width: 85%; /* Slightly wider quote container */
+    }
+
+    .quote::after {
+        height: 15px; /* Adjusted height for tablet */
+    }
+
+
+    .work-items {
+        
+        flex-direction: row; /* Zet items naast elkaar */
+        flex-wrap: wrap; /* Zorg ervoor dat ze in een nieuwe regel kunnen komen */
+       justify-content: center;
+        
+    }
+
+    .work-item {
+        flex: 1 1 350px; /* Drie items per rij met een gap */
+        margin-bottom: 40px; /* Verminder de margin onder de werkitems */
+        max-width: 350px;
+        
+    } 
+
+    .work-item img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        height: 300px; /* Stel een vaste hoogte in voor alle afbeeldingen */
+        object-fit: cover;
+    }
+    
 
     .rounded-section {
         flex-direction: row;
@@ -695,24 +687,13 @@ footer {
 
     }
 
-    .work-items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5%;
-        margin: 48px;
-       
+    /* wat was dit?
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         
-    }
+    }*/
     
-    .work-item {
-        width: 90%;
-        
-    }
-    
-    .work-item img {
-        height: 250px;
-        object-fit: cover;
-    }
 
 
 }
@@ -721,62 +702,103 @@ footer {
 
 /* Min-width 900px */
 @media (min-width: 1100px) {
-    .photo-grid {
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 kolommen op grote schermen */
-        gap: 40px;
-        /* Vergrote gap tussen de items */
-        max-width: 1500px;
-    }
+/* General Layout */
+header {
+    padding: 0;
+}
 
-    .navbar {
-        width: 99%;
+.footer {
+    margin-top: 290px;
+}
 
-    }
+/* Navbar */
+.navbar {
+    width: 99%;
+}
 
-    footer {
-        margin-top: 290px;
-    }
+/* Head (Background Image) */
+.head {
+    background-image: url(../images/IMG_2732\ copy.webp); /* Gebruik desktop-specifieke achtergrond */
+    height: 100vh; /* Volledige hoogte voor desktop */
+    background-size: contain; 
+    background-position: right top; /* Positie van de afbeelding */
+    top: 0; /* Bovenaan uitlijnen */
+    right: 0; /* Rechts uitlijnen */
+    z-index: 1; /* Ondersteunende z-index */
+    opacity: 0.85;
+}
 
-    .head img {
-        max-width: 60%;
-        border-radius: 8px;
-    }
-
-    .rounded-section {
-        flex-direction: row;
-        /* Horizontale weergave voor grotere schermen */
-        justify-content: space-between;
-        /* Ruimte tussen de elementen */
-        padding: 48px 24px;
-        /* Aanpassen van padding voor bredere schermen */
-    }
-
-    .about {
-        width: 60%;
-        /* 60% van de breedte voor de tekst */
-    }
-
-    .flex {
-        flex-direction: column;
-        /* Houd de afbeelding en dynamische tekst verticaal */
-        align-items: flex-end;
-        /* Align afbeelding naar rechts */
-        width: 30%;
-        /* 30% van de breedte voor de afbeelding */
-    }
-
-    .rounded-section {
-        flex-direction: row;
-       
-        justify-content: space-between;
-        height: 800px;
-    }
-
-    .dynamic img {
-        max-width: 400px;
-        
-    }
-
+.header-links #btn {
+    display: inline-block; /* Zorg ervoor dat de knop zich gedraagt als een blok */
+    margin: 0 2.5%; /* Ruimte tussen de knoppen */
+    padding: 20px 50px; /* Grotere padding om de knoppen groter te maken */
+    font-size: 20px; /* Grotere lettergrootte voor de knoppen */
     
+    border-radius: 40px; /* Afgeronde hoeken */
+    
+    transition: background-color 0.3s ease; /* Voeg een vloeiende overgang toe bij hover */
+}
+
+/* Optioneel: Hover-effect */
+.header-links #btn:hover {
+    opacity: 0.80; /* Stel de transparantie in op 0.85 bij hover */
+    transform: scale(1.05); /* Maak de knop iets groter bij hover */
+}
+
+
+
+
+/* Text Styles */
+.text {
+    text-align: left; /* Align text to the left for desktop */
+}
+
+/* Quote Styles */
+.quote {
+    font-size: 32px; /* Original font size */
+    max-width: 100%; /* Full width for desktop */
+}
+
+.quote::after {
+    height: 20px; /* Full height for desktop */
+    bottom: 0; /* Original positioning */
+}
+
+/* Begin Styles */
+.begin {
+    font-size: 64px; /* Original font size */
+}
+
+/* Dynamic Image */
+.dynamic img {
+    max-width: 400px; /* Maximale breedte van de afbeelding */
+}
+
+
+/* Rounded Section */
+.rounded-section {
+    display: flex; /* Zorg ervoor dat flexbox werkt */
+    flex-direction: row; /* Horizontale weergave voor grotere schermen */
+    justify-content: space-between; /* Ruimte tussen de elementen */
+    height: 800px; /* Hoogte van de sectie */
+    padding: 48px 24px; /* Padding voor bredere schermen */
+}
+
+.about {
+    width: 60%; /* 60% van de breedte voor de tekst */
+}
+
+
+
+/* Flex Container */
+.flex {
+    display: flex; /* Zorg ervoor dat flexbox werkt */
+    flex-direction: column; /* Houd de afbeelding en dynamische tekst verticaal */
+    align-items: flex-end; /* Align afbeelding naar rechts */
+    width: 30%; /* 30% van de breedte voor de afbeelding */
+}
+
+
+
+
 }
