@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Amy Bruyninckx</title>
     <link rel="stylesheet" href="fonts/font.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://use.typekit.net/osw2ogp.css">
 
@@ -16,15 +16,24 @@
 
     <div class="navbar">
         <a id="logo" href="index.html"><img src="images/Design_logo.png" alt=""></a>
-
-        <div class="navmenu">
+    
+        <!--<div class="hamburger" id="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <path d="M5 7h20M5 15h20M5 23h20" stroke="#333" stroke-width="2" fill="none" />
+            </svg>
+        </div>-->
+    
+        <div class="navmenu" id="navmenu">
             <a href="photography.html">PHOTOGRAPHY</a>
-            <a href="design.html">DESIGN</a>
-            <a href="code.html">CODE</a>
+            <a href="design.html">PROJECTS</a>
         </div>
 
-        <a id="btn" href="#">@email</a>
+        <a id="btn" href="#">by.amy@hotmail.com</a>
     </div>
+    
+
+
+
     <header>
         <div class="head"></div> <!-- Background image -->
         <div class="header-content">
@@ -32,21 +41,21 @@
                 <h1 class="begin">Hi, I'm Amy.</h1>
             </div>
             <div class="header-links">
+                <a id="btn" href="design.html">PROJECTS</a>
                 <a id="btn" href="photography.html">PHOTOGRAPHY</a>
-                <a id="btn" href="design.html">DESIGN</a>
             </div>
-           
+
         </div>
-        <h3 class="quote">"Your dreams are your wings. Use them to soar." – Anonymous</h3>
+        <h3 class="quote">"Your dreams are your wings. Use them to soar." <span class="author">– Anonymous</span></h3>
     </header>
-    
-    
-    
+
+
+
 
 
     <section class="selected-work">
         <h2>Selected work</h2>
-        
+
         <div class="work-items">
             <div class="work-item">
                 <img src="/images/portret_extra3.webp" alt="Project 2">
@@ -63,32 +72,37 @@
             </div>
             <div class="work-item">
                 <img src="/images/portret_extra3.webp" alt="Project 2">
-                <h3>Photography</h3>
+                <h3>Digital Nomad Bootcamp</h3>
                 <p>Description of project 2. You can customize this text.</p>
                 <a id="btn" href="/design/Typemachine/index.html">Open project</a>
             </div>
         </div>
     </section>
-    
+
     <section class="rounded-section">
         <div class="about">
             <h2>What I am all about</h2>
-            <p>My name is Amy Bruyninckx, and I am a passionate designer and photographer. I have always been fascinated by the power of visuals and how they can convey stories and emotions. This passion led me to pursue a career where I can blend creativity with technical skills to create impactful designs and stunning photographs.</p>
-            <p>I chose this career because I believe in the magic of capturing moments and creating designs that resonate with people. Every project I work on is a new adventure, a new challenge to express my creativity and skills.</p>
+            <p>My name is Amy Bruyninckx, and I am a passionate designer and photographer. I have always been fascinated
+                by the power of visuals and how they can convey stories and emotions. This passion led me to pursue a
+                career where I can blend creativity with technical skills to create impactful designs and stunning
+                photographs.</p>
+            <p>I chose this career because I believe in the magic of capturing moments and creating designs that
+                resonate with people. Every project I work on is a new adventure, a new challenge to express my
+                creativity and skills.</p>
             <p id="dynamic-word"><br></p>
         </div>
-        
+
         <div class="flex">
             <div class="dynamic">
                 <img src="images/dynamic.jpeg" alt="Dynamic image">
             </div>
         </div>
     </section>
-    
-    
-    
 
-   
+
+
+
+
 
 
 
@@ -123,7 +137,16 @@
         });
 
 
-       
+
+
+        document.getElementById('hamburger').onclick = function () {
+            const navmenu = document.querySelector('.navmenu');
+            navmenu.style.display = navmenu.style.display === 'flex' ? 'none' : 'flex';
+        };
+
+
+
+
     </script>
 </body>
 
