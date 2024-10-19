@@ -8,6 +8,8 @@ body {
     padding: 0;
     background-color: #F3EDE7;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
 }
 
 
@@ -340,10 +342,6 @@ h2 {
 
 /*================================================================*/
 
-.paint {
-    padding: 200px 0 0 48px;
-
-}
 
 
 /* Project Categories Styling */
@@ -592,23 +590,23 @@ h2 {
     /* Toon de tekst bij hover */
 }
 
-/* Sticker styling */
+/* Sticker styling 
 .sticker {
     position: absolute;
-    /* Maak de sticker absoluut gepositioneerd */
+    
     top: -25%;
-    /* Plaats de sticker zo dat deze boven de foto uitsteekt */
+    
     left: 15%;
-    /* Pas deze waarde aan afhankelijk van waar je het wilt hebben */
+    
     width: 10px;
-    /* Pas de grootte aan indien nodig */
+    
     height: 20px;
-    /* Houd de verhoudingen van de sticker */
+    
     z-index: 2;
-    /* Zorg ervoor dat de sticker boven de afbeelding staat */
+    
     transform: translateY(-50%);
-    /* Dit zorgt ervoor dat de sticker iets omhoog wordt getrokken */
-}
+   
+} */
 
 
 
@@ -800,6 +798,60 @@ footer {
         
     }
 
+
+    .side-nav {
+        position: fixed;
+        right: 20px;
+        top: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 1000;
+    }
+    
+
+    .side-nav a {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Zorgt ervoor dat tekst links staat */
+        text-decoration: none; /* Verwijder onderstreping van de link */
+       
+    }
+
+    .section-name:hover {
+        color: #c5cfb8;
+        transform: scale(1.1);
+    }
+
+    
+    .section-name {
+        margin-right: 10px; /* Ruimte tussen tekst en dot */
+        font-size: 14px;
+        color: #333;
+        
+    }
+    
+    .dot {
+        width: 12.5px;
+        height: 12.5px;
+        background-color: #333;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    
+
+    .line {
+        width: 2px;
+        height: 100px;
+        background-color: #333;
+        margin-right: 5px;
+    }
 
 
 }
@@ -997,6 +1049,42 @@ footer {
         gap: 5%;
         
     }
+
+    .project-container{
+        height: 800px;
+    }
+
+
+    .pet {
+        height: 800px;
+        background-color: #fff;
+    }
+    .dev {
+        height: 800px;
+        background-color: #fff;
+    }
+
+    
+    
+
+    
+    
+    
+    
+   
+   
+    
+    
+    
+    
+    
+   
+    
+  
+
+    
+    
+    
 
 
 
