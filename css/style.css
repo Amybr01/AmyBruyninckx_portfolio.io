@@ -609,6 +609,26 @@ h2 {
 } */
 
 
+.side-nav{
+    display:none;
+}
+
+.project-container{
+    height: 800px;
+}
+
+
+.pet {
+    height: 800px;
+    background-color: #fff;
+}
+.dev {
+    height: 800px;
+    background-color: #fff;
+}
+
+
+
 
 /* Footer styling */
 
@@ -1050,20 +1070,7 @@ footer {
         
     }
 
-    .project-container{
-        height: 800px;
-    }
-
-
-    .pet {
-        height: 800px;
-        background-color: #fff;
-    }
-    .dev {
-        height: 800px;
-        background-color: #fff;
-    }
-
+  
     
     
 
