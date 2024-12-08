@@ -13,6 +13,9 @@ body {
 }
 
 
+
+
+
 /* Custom font */
 @font-face {
     font-family: 'Larosh';
@@ -30,12 +33,16 @@ body {
     z-index: 3;
     position: fixed;
     justify-content: space-between;
-    padding-top: 10px;
+    
     /* NOG FIXEN!!!!!!!! */
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Dropshadow */
 
+    margin: 0;
+    padding: 0;
+    top: 0; /* Ensures it sticks to the top of the screen */
+    left: 0;
     
 }
 
@@ -342,92 +349,109 @@ h2 {
 
 /*================================================================*/
 
-
-
-/* Project Categories Styling */
-.project-categories {
-    display: flex;
-    justify-content: space-around;
+.design {
+    margin: 10% 5%;
+    text-align: center;
 }
 
-.project-categories p {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+.design h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 50px 0px;
 }
 
-/* Project Container Styling */
+.design h1 {
+    padding-top: 40px;
+    
+}
+
 .project-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding-top: 200px;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+}
+
+.project-container-inner {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #f9f9f9;
+    padding: 20px;
+    width: 300px; /* Set project width */
+    flex-shrink: 0;
 }
 
+
 .project img {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    max-height: 300px; 
+    object-fit: contain;
     border-radius: 5px;
-    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .project h2 {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+   
 }
 
-/* Carousel Styling */
-.carrousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    height: 500px;
-    padding: 0 50px;
+.project-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    width: 100%;
+.project-skills {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
+
+.project-description,
+.project-skills {
+    max-height: 0; /* Collapse height by default */
     overflow: hidden;
+    opacity: 0; 
+    transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition for both */
 }
 
-.carrousel p {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
+.project:hover .project-description,
+.project:hover .project-skills {
+    opacity: 1;
+    max-height: 100px; 
 }
 
 
 
+.pet {
+    height: 500px; /* Initial height for mobile */
+    background-color: #fff;
+    background-image: url(../images/mountains.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom; /* Aligns image to bottom */
+    
+}
 
-/* Photography Page Styling */
+a, h2, p {
+    text-decoration: none;
+}
+
+
+/*----------------------------------------------------------------*/
+
+
+
 #logo img {
     width: 120px;
     height: auto;
@@ -450,7 +474,7 @@ h2 {
     height: 950px;
 }
 
-/* Slider Styling */
+
 .slider {
     width: 100%;
     margin: 10 auto;
@@ -489,7 +513,7 @@ h2 {
     margin: 0 5px;
 }
 
-/* Collage Styling */
+
 .collage {
     display: flex;
     flex-direction: column;
@@ -526,7 +550,7 @@ h2 {
     object-fit: cover;
 }
 
-/* Photo Gallery Container */
+
 .photo-gallery {
     display: flex;
     justify-content: center;
@@ -535,13 +559,11 @@ h2 {
     background-color: #F3EDE7;
 }
 
-/* Photo Grid Styling */
+
 .photo-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* 1 kolom voor mobiele weergave */
     gap: 15px;
-    /* Gap voor mobiele weergave */
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
@@ -551,7 +573,6 @@ h2 {
     position: relative;
     background-color: #D3D3D3;
     padding-bottom: 100%;
-    /* Aspect ratio 1:1 (vierkant) */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -568,7 +589,6 @@ h2 {
 
 .photo-item:hover {
     opacity: 0.6;
-    /* Verklein de afbeelding bij hover */
 }
 
 .photo-item .overlay-text {
@@ -581,54 +601,21 @@ h2 {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    /* Vloeiende overgang */
     text-align: center;
 }
 
 .photo-item:hover .overlay-text {
     opacity: 1;
-    /* Toon de tekst bij hover */
-}
-
-/* Sticker styling 
-.sticker {
-    position: absolute;
     
-    top: -25%;
-    
-    left: 15%;
-    
-    width: 10px;
-    
-    height: 20px;
-    
-    z-index: 2;
-    
-    transform: translateY(-50%);
-   
-} */
-
-
-.side-nav{
-    display:none;
-}
-
-.project-container{
-    height: 800px;
-}
-
-
-.pet {
-    height: 800px;
-    background-color: #fff;
-}
-.dev {
-    height: 800px;
-    background-color: #fff;
 }
 
 
 
+
+
+
+
+/* ------------------------------------------------ */
 
 /* Footer styling */
 
@@ -637,13 +624,61 @@ footer {
     padding: 20px;
     text-align: center;
     width: 100%;
-    /* Zorg ervoor dat de footer de volle breedte heeft */
     box-sizing: border-box;
-    /* Inclusief padding en margin in de breedte */
-
+    position: relative;
     bottom: 0;
-    /* Plaats de footer aan de onderkant */
+    padding: 20px 10%;
 }
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.tiny-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.tiny-nav a{
+    text-decoration: none;
+    color: #333;
+}
+
+.tiny-nav a:hover{
+    scale: 1.2;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons svg{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.social-icons svg:hover{
+    width: 30px;
+    height: 30px;
+}
+
+
+footer p {
+    margin: 5px 0;
+}
+
+
 
 
 /*----------------------------------------------------------------------*/
@@ -874,6 +909,14 @@ footer {
     }
 
 
+    .project-container-inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    
+
 }
 
 
@@ -1070,27 +1113,6 @@ footer {
         
     }
 
-  
-    
-    
-
-    
-    
-    
-    
-   
-   
-    
-    
-    
-    
-    
-   
-    
-  
-
-    
-    
     
 
 
