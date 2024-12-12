@@ -14,8 +14,6 @@ body {
 
 
 
-
-
 /* Custom font */
 @font-face {
     font-family: 'Larosh';
@@ -26,7 +24,7 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    align-items: center;
+    align-items: center center;
     background-color: #F3EDE7;
     width: 100vw;
     /* Volledige breedte van het scherm */
@@ -40,7 +38,7 @@ body {
     /* Dropshadow */
 
     margin: 0;
-    padding: 0;
+    padding: 30px 0px;
     top: 0; /* Ensures it sticks to the top of the screen */
     left: 0;
     
@@ -49,6 +47,7 @@ body {
 #logo img {
     max-width: 80px;
     margin-left: 16px;
+    margin-top: 10px;
 }
 
 .navmenu{
@@ -67,6 +66,7 @@ body {
     margin-bottom: 8px;
     font-size: 12px; /* Kleinere fontgrootte voor deze knop */
     margin-right: 16px;
+    margin-top: 10px;
 }
 
 
@@ -80,6 +80,7 @@ header {
     /* Geen padding voor de header */
     text-align: center;
     /* Centraal uitlijnen voor header */
+    margin-top: 100px;
 }
 
 /* Background image section */
@@ -384,21 +385,25 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    width: 300px; /* Set project width */
+    width: 300px; /* Breedte blijft hetzelfde */
+    height: 320px; /* Kleiner in hoogte voor Polaroid-effect */
+    overflow: hidden;
+    transition: height 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
     flex-shrink: 0;
 }
 
 
 .project img {
-    width: 100%; 
-    max-height: 300px; 
+    
+    max-height: 270px; 
+    max-width: 270px;/* Zorg ervoor dat de afbeelding past in de kleinere hoogte */
     object-fit: contain;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    
+    margin-bottom: 10px;
 }
 
 .project h2 {
-    margin-top: 20px;
+    margin-top: 10px;
     color: #333;
     text-decoration: none;
     font-weight: 600;
@@ -415,6 +420,11 @@ h2 {
     font-size: 0.9rem;
     color: #555;
     font-style: italic;
+}
+
+.project:hover {
+    height: 500px; /* Volledige hoogte bij hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Iets grotere schaduw bij hover */
 }
 
 .project-description,
@@ -440,11 +450,23 @@ h2 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom; /* Aligns image to bottom */
+
+    text-align: center;
     
+}
+
+.pet h2{
+    padding-top: 40px;
+    
+}
+
+.pet p {
+    margin: 0 32px;
 }
 
 a, h2, p {
     text-decoration: none;
+    
 }
 
 
@@ -659,18 +681,18 @@ footer {
 .social-icons {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 7px;
 }
 
 .social-icons svg{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     
 }
 
 .social-icons svg:hover{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 
 
@@ -745,6 +767,13 @@ footer p {
 
 
     /*----------------------------------------------------------------*/
+
+
+    header {
+        
+        margin-top: 0px;
+    }
+
 
      .head {
         height: 100vh;
@@ -914,6 +943,12 @@ footer p {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .pet {
+        height: 600px;
+        
+    }
+   
     
     
 
@@ -1113,7 +1148,15 @@ footer p {
         
     }
 
-    
+    .pet {
+        height: 700px;
+        
+    }
+
+    .pet h2{
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
 
 
 
