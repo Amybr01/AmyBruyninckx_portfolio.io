@@ -229,6 +229,7 @@ header {
     border-radius: 16px;
 }*/
 
+----
 
 /* WORK SECTION */
 .work {
@@ -241,6 +242,8 @@ header {
     background-color: #f9f9f9;
     padding: 64px 20px;
     text-align: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 
 }
 
@@ -257,55 +260,80 @@ header {
 }*/
 
 
-
 .work-items {
     display: flex;
-    flex-direction: column;
-    /* Zorg ervoor dat items onder elkaar komen */
-    gap: 30px;
-    /* Ruimte tussen de werkitems */
+    flex-wrap: wrap; /* Zorg dat items naast elkaar staan en breken bij kleinere schermen */
+    gap: 30px; /* Ruimte tussen items */
     margin: 5%;
-
+    align-items: stretch; /* Zorg ervoor dat alle items even groot zijn */
 }
 
-/* Work Item */
 .work-item {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 10%;
+    display: flex; /* Flexbox voor de inhoud */
+    flex-direction: column; /* Stapel items verticaal */
+ 
+
+    box-sizing: border-box; /* Houd padding binnen de breedte */
+    min-height: 400px; /* Zorg voor een minimale hoogte zodat alles consistent blijft */
 }
 
 .work-item img {
-    width: 90%;
-    border-radius: 8px;
     margin-bottom: 15px;
     height: 250px;
-    /* Stel een vaste hoogte in voor alle afbeeldingen */
-    object-fit: cover;
+    object-fit: contain; /* Zorg dat afbeeldingen netjes worden geschaald */
 }
 
 .work-item h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+   padding-top: 10px;
+    margin: 0 auto 20px auto; /* Centreer de titel */
+    text-align: center;
 }
 
 .work-item p {
     font-size: 1rem;
-    padding: 10px 0;
+   padding-bottom: 50px;
+    max-width: 100%;
+    margin: 10px 20px; /* Centreer de tekst */
+    text-align: left; /* Lijn tekst links uit */
+}
+
+.work-item a {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: auto;
+    background-color: #c5cfb8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 32px; 
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.work-item a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .work-item:hover {
     transform: scale(1.02) translateY(-5px);
-    /* Verplaats het item iets omhoog bij hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    /* Versterk de schaduw bij hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Versterk schaduw bij hover */
+}
+
+.mustang {
+    object-position: 30% 0; /* Pas de positie van de afbeelding aan */
 }
 
 
 
+-----
 
 /* Rounded Section */
 .rounded-section {
@@ -314,11 +342,23 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Ruimte tussen items */
+    
+    
+    
+    
+}
+
+.rounded-section p{
+    margin-left: 32px;
+    max-width: 80%;
+    
+    
+    
 }
 
 h2 {
     color: #333;
+    margin: 64px 32px;
 }
 
 /* Dynamic word */
@@ -343,6 +383,145 @@ h2 {
     /* Image takes full width on mobile */
     border-radius: 16px;
 }
+
+----------------------------------------------------------------
+
+.contact {
+    
+    
+   
+
+    position: relative;
+    z-index: 3;
+
+    background-color: #F9F9F9;
+
+    
+    
+    
+
+}
+
+
+
+.last{
+    background-color: #F9F9F9;
+    height: 1200px;
+    
+    
+}
+
+
+
+
+
+.story {
+    position: relative; /* Zorgt ervoor dat kinderen relatief geplaatst worden */
+    width: 100%;
+    height: 600px;
+    text-align: left;
+    
+    
+}
+
+.story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/safari.JPG);
+    background-size: cover;
+     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); /* Subtiele schaduw rondom */
+    opacity: 0.25; 
+    z-index: 1; 
+    
+}
+
+.story h2, .story p, .story span {
+    position: relative; 
+    z-index: 2;
+    padding: 0px 32px;
+    
+}
+
+.story h2 {
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 8%;
+    font-size: 1.5rem;
+    
+}
+
+.story p {
+    
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    
+}
+
+.ital {
+    font-style: italic;
+   
+    
+}
+
+.contact h2{
+    margin-top: 80px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contact p{
+    padding-left: 32px;
+    max-width: 80%;
+}
+
+.reference {
+    color: #333;
+    text-decoration: underline;
+}
+
+.experience {
+    padding: 32px 30px;
+}
+
+.experience h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex; /* Zorgt dat de afbeeldingen naast elkaar staan */
+    justify-content: space-between; /* Zorgt voor ruimte tussen de afbeeldingen */
+    gap: 10px; /* Optioneel: ruimte tussen de afbeeldingen */
+    align-items: center; /* Zorgt voor uitlijning in het midden */
+}
+
+.image-container div {
+    flex: 1; /* Laat de divs flexibel de ruimte gebruiken */
+    display: flex;
+    justify-content: center; /* Centreer de afbeeldingen in hun container */
+}
+
+.experience img {
+    width: 130px; /* Pas aan op basis van je gewenste grootte */
+    height: 130px; /* Zorg voor een vierkant formaat */
+    border-radius: 50%; /* Maakt de afbeelding rond */
+    object-fit: cover; /* Zorgt dat de afbeelding netjes binnen de cirkel past */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optioneel: subtiele schaduw */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optioneel: hover-effect */
+}
+
+.experience img:hover {
+    transform: scale(1.05); /* Beetje vergroten bij hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Versterk de schaduw bij hover */
+}
+
+
 
 
 
@@ -601,12 +780,14 @@ a, h2, p {
 
 .photo-item img {
     position: absolute;
-    top: 0;
-    left: 0;
+    
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
     border-radius: 8px;
+
+    object-fit: cover; /* Laat de afbeelding de container vullen */
+    object-position: center
 }
 
 .photo-item:hover {
@@ -630,6 +811,16 @@ a, h2, p {
     opacity: 1;
     
 }
+
+--- /*photos goed zetten*/
+.portret5 {
+    object-fit: cover;
+    object-position: 30% 50%;
+}
+ 
+    
+
+
 
 
 
@@ -699,6 +890,24 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -875,6 +1084,27 @@ footer p {
 
     }
 
+
+    .last {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+        gap: 20px;
+        
+        height: auto;
+    }
+
+    .story, .contact {
+        flex: 1; /* Laat beide secties gelijk groeien */
+        max-width: 55%; /* Zorg dat ze maximaal 48% van de breedte innemen */
+        padding-bottom: 50px;
+        height: auto; /* Hoogte aanpassen aan de inhoud */
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+
     
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -974,6 +1204,11 @@ footer p {
 
     .footer {
         margin-top: 290px;
+        
+    }
+
+    .footer-container a{
+        font-size: 24px;
     }
 
     /* Navbar */
@@ -1123,6 +1358,14 @@ footer p {
         /* 60% van de breedte voor de tekst */
     }
 
+    .story, .contact {
+        
+        padding-left: 32px;
+        padding-right: 32px;
+
+        height: 600px;
+    }
+
 
 
     /* Flex Container */
@@ -1148,13 +1391,18 @@ footer p {
         
     }
 
+    .photo-grid{
+        padding-bottom: 200px;
+        
+    }
+
     .pet {
-        height: 700px;
+        height: 800px;
         
     }
 
     .pet h2{
-        padding-top: 80px;
+        padding-top: 100px;
         padding-bottom: 20px;
     }
 
