@@ -17,10 +17,14 @@
     <div class="navbar">
         <a id="logo" href="index.html"><img src="images/Design_logo.png" alt=""></a>
 
-    
+        <div class="hamburger" id="hamburger">
+            <svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.4800000000000001"></g><g id="SVGRepo_iconCarrier"> <path d="M3 5H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 12H16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 19H21" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
         <div class="navmenu" id="navmenu">
             <a href="index.html">HOME</a>
             <a href="photography.html">PHOTOGRAPHY</a>
+            <a id="btn-in" href="mailto:by.amy@hotmail.com">By.amy@hotmail.com</a>
 
         </div>
 
@@ -150,7 +154,21 @@
     </footer>
     
     
-    
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navmenu = document.getElementById("navmenu");
+
+    hamburger.addEventListener("click", () => {
+        if (navmenu.style.display === "flex") {
+            navmenu.style.display = "none";
+        } else {
+            navmenu.style.display = "flex";
+        }
+    });
+});
+    </script>
 
 </body>
 

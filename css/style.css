@@ -21,25 +21,131 @@ body {
 }
 
 
-/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    /* Verticaal centreren van logo en hamburger */
+
+    background-color: #f3ede7;
+    /* Achtergrondkleur van de navbar */
+    width: 100%;
+    padding: 30px;
+    /* Pas de padding aan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optionele schaduw */
+    position: fixed;
+    /* Navbar blijft bovenaan vaststaan */
+    top: 0;
+    /* Bovenkant van het scherm */
+    z-index: 3;
+    /* Zorg dat het boven andere elementen blijft */
+}
+
+
+
+
+
+/* Hamburger menu */
+.hamburger {
+    display: flex;
+    align-items: center;
+    /* Verticaal centreren binnen de navbar */
+    justify-content: center;
+    cursor: pointer;
+    /* Zorg voor een klikbare cursor */
+    margin-left: auto;
+    /* Zorg ervoor dat de hamburger helemaal naar rechts wordt geduwd */
+    margin-right: 70px;
+    /* Voeg optioneel wat ruimte rechts toe */
+}
+
+.hamburger svg {
+    height: 30px;
+    /* Zorg dat de hoogte consistent is */
+    margin-bottom: 10px;
+    width: auto;
+    /* Breedte proportioneel aanpassen */
+
+}
+
+
+.navmenu {
+    display: none;
+    flex-direction: column;
+    background-color: #f3ede7;
+    position: absolute;
+    top: 119px;
+    /* Plaats het menu lager, afhankelijk van je navbar-hoogte */
+    right: 50px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 101;
+}
+
+
+
+/* Menu items */
+.navmenu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.navmenu a:hover {
+    opacity: 0.7;
+    scale: 1.1;
+}
+
+.navbar #btn {
+    display: none;
+}
+
+.navmenu #btn-in {
+    display: block;
+    background-color: #c5cfb8;
+    padding: 10px 15px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+#logo img {
+    max-width: 110px;
+
+
+}
+
+
+/* Navbar Styling 
 .navbar {
     display: flex;
     align-items: center center;
     background-color: #F3EDE7;
     width: 100vw;
-    /* Volledige breedte van het scherm */
+    /* Volledige breedte van het scherm 
     z-index: 3;
     position: fixed;
     justify-content: space-between;
     
-    /* NOG FIXEN!!!!!!!! */
+    
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Dropshadow */
+  
 
     margin: 0;
     padding: 30px 0px;
-    top: 0; /* Ensures it sticks to the top of the screen */
+    top: 0;
     left: 0;
     
 }
@@ -64,10 +170,10 @@ body {
     text-decoration: none;
     color: #333;
     margin-bottom: 8px;
-    font-size: 12px; /* Kleinere fontgrootte voor deze knop */
+    font-size: 12px;
     margin-right: 16px;
     margin-top: 10px;
-}
+}*/
 
 
 /*----------------------------------------------------------------*/
@@ -243,7 +349,7 @@ header {
     padding: 64px 20px;
     text-align: center;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -262,10 +368,13 @@ header {
 
 .work-items {
     display: flex;
-    flex-wrap: wrap; /* Zorg dat items naast elkaar staan en breken bij kleinere schermen */
-    gap: 30px; /* Ruimte tussen items */
+    flex-wrap: wrap;
+    /* Zorg dat items naast elkaar staan en breken bij kleinere schermen */
+    gap: 30px;
+    /* Ruimte tussen items */
     margin: 5%;
-    align-items: stretch; /* Zorg ervoor dat alle items even groot zijn */
+    align-items: stretch;
+    /* Zorg ervoor dat alle items even groot zijn */
 }
 
 .work-item {
@@ -274,34 +383,42 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: flex; /* Flexbox voor de inhoud */
-    flex-direction: column; /* Stapel items verticaal */
- 
+    display: flex;
+    /* Flexbox voor de inhoud */
+    flex-direction: column;
+    /* Stapel items verticaal */
 
-    box-sizing: border-box; /* Houd padding binnen de breedte */
-    min-height: 400px; /* Zorg voor een minimale hoogte zodat alles consistent blijft */
+
+    box-sizing: border-box;
+    /* Houd padding binnen de breedte */
+    min-height: 400px;
+    /* Zorg voor een minimale hoogte zodat alles consistent blijft */
 }
 
 .work-item img {
     margin-bottom: 15px;
     height: 250px;
-    object-fit: contain; /* Zorg dat afbeeldingen netjes worden geschaald */
+    object-fit: contain;
+    /* Zorg dat afbeeldingen netjes worden geschaald */
 }
 
 .work-item h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-   padding-top: 10px;
-    margin: 0 auto 20px auto; /* Centreer de titel */
+    padding-top: 10px;
+    margin: 0 auto 20px auto;
+    /* Centreer de titel */
     text-align: center;
 }
 
 .work-item p {
     font-size: 1rem;
-   padding-bottom: 50px;
+    padding-bottom: 50px;
     max-width: 100%;
-    margin: 10px 20px; /* Centreer de tekst */
-    text-align: left; /* Lijn tekst links uit */
+    margin: 10px 20px;
+    /* Centreer de tekst */
+    text-align: left;
+    /* Lijn tekst links uit */
 }
 
 .work-item a {
@@ -311,7 +428,7 @@ header {
     background-color: #c5cfb8;
     color: #333;
     text-decoration: none;
-    border-radius: 32px; 
+    border-radius: 32px;
     font-size: 1rem;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -324,11 +441,13 @@ header {
 
 .work-item:hover {
     transform: scale(1.02) translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Versterk schaduw bij hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* Versterk schaduw bij hover */
 }
 
 .mustang {
-    object-position: 30% 0; /* Pas de positie van de afbeelding aan */
+    object-position: 30% 0;
+    /* Pas de positie van de afbeelding aan */
 }
 
 
@@ -342,18 +461,18 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    
-    
-    
+
+
+
+
 }
 
-.rounded-section p{
+.rounded-section p {
     margin-left: 32px;
     max-width: 80%;
-    
-    
-    
+
+
+
 }
 
 h2 {
@@ -384,31 +503,31 @@ h2 {
     border-radius: 16px;
 }
 
-----------------------------------------------------------------
+---------------------------------------------------------------- 
 
 .contact {
-    
-    
-   
+
+
+
 
     position: relative;
     z-index: 3;
 
     background-color: #F9F9F9;
 
-    
-    
-    
+
+
+
 
 }
 
 
 
-.last{
+.last {
     background-color: #F9F9F9;
     height: 1200px;
-    
-    
+
+
 }
 
 
@@ -416,12 +535,13 @@ h2 {
 
 
 .story {
-    position: relative; /* Zorgt ervoor dat kinderen relatief geplaatst worden */
+    position: relative;
+    /* Zorgt ervoor dat kinderen relatief geplaatst worden */
     width: 100%;
     height: 600px;
     text-align: left;
-    
-    
+
+
 }
 
 .story::before {
@@ -433,17 +553,20 @@ h2 {
     height: 100%;
     background-image: url(../images/safari.JPG);
     background-size: cover;
-     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); /* Subtiele schaduw rondom */
-    opacity: 0.25; 
-    z-index: 1; 
-    
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    /* Subtiele schaduw rondom */
+    opacity: 0.25;
+    z-index: 1;
+
 }
 
-.story h2, .story p, .story span {
-    position: relative; 
+.story h2,
+.story p,
+.story span {
+    position: relative;
     z-index: 2;
     padding: 0px 32px;
-    
+
 }
 
 .story h2 {
@@ -451,30 +574,30 @@ h2 {
     padding-top: 7%;
     padding-bottom: 8%;
     font-size: 1.5rem;
-    
+
 }
 
 .story p {
-    
+
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 10px;
-    
+
 }
 
 .ital {
     font-style: italic;
-   
-    
+
+
 }
 
-.contact h2{
+.contact h2 {
     margin-top: 80px;
     text-align: center;
     padding-bottom: 20px;
 }
 
-.contact p{
+.contact p {
     padding-left: 32px;
     max-width: 80%;
 }
@@ -494,31 +617,45 @@ h2 {
 }
 
 .image-container {
-    display: flex; /* Zorgt dat de afbeeldingen naast elkaar staan */
-    justify-content: space-between; /* Zorgt voor ruimte tussen de afbeeldingen */
-    gap: 10px; /* Optioneel: ruimte tussen de afbeeldingen */
-    align-items: center; /* Zorgt voor uitlijning in het midden */
+    display: flex;
+    /* Zorgt dat de afbeeldingen naast elkaar staan */
+    justify-content: space-between;
+    /* Zorgt voor ruimte tussen de afbeeldingen */
+    gap: 10px;
+    /* Optioneel: ruimte tussen de afbeeldingen */
+    align-items: center;
+    /* Zorgt voor uitlijning in het midden */
 }
 
 .image-container div {
-    flex: 1; /* Laat de divs flexibel de ruimte gebruiken */
+    flex: 1;
+    /* Laat de divs flexibel de ruimte gebruiken */
     display: flex;
-    justify-content: center; /* Centreer de afbeeldingen in hun container */
+    justify-content: center;
+    /* Centreer de afbeeldingen in hun container */
 }
 
 .experience img {
-    width: 130px; /* Pas aan op basis van je gewenste grootte */
-    height: 130px; /* Zorg voor een vierkant formaat */
-    border-radius: 50%; /* Maakt de afbeelding rond */
-    object-fit: cover; /* Zorgt dat de afbeelding netjes binnen de cirkel past */
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optioneel: subtiele schaduw */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optioneel: hover-effect */
+    width: 130px;
+    /* Pas aan op basis van je gewenste grootte */
+    height: 130px;
+    /* Zorg voor een vierkant formaat */
+    border-radius: 50%;
+    /* Maakt de afbeelding rond */
+    object-fit: cover;
+    /* Zorgt dat de afbeelding netjes binnen de cirkel past */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optioneel: subtiele schaduw */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Optioneel: hover-effect */
 }
 
 .experience img:hover {
-    transform: scale(1.05); /* Beetje vergroten bij hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Versterk de schaduw bij hover */
+    transform: scale(1.05);
+    /* Beetje vergroten bij hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Versterk de schaduw bij hover */
 }
 
 
@@ -542,20 +679,20 @@ h2 {
 
 .design h1 {
     padding-top: 40px;
-    
+
 }
 
 .project-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 .project-container-inner {
     display: flex;
-    flex-direction: column; 
-    gap: 30px; 
+    flex-direction: column;
+    gap: 30px;
 }
 
 .project {
@@ -564,20 +701,24 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    width: 300px; /* Breedte blijft hetzelfde */
-    height: 320px; /* Kleiner in hoogte voor Polaroid-effect */
+    width: 300px;
+    /* Breedte blijft hetzelfde */
+    height: 320px;
+    /* Kleiner in hoogte voor Polaroid-effect */
     overflow: hidden;
-    transition: height 0.3s ease, box-shadow 0.3s ease; /* Zachte overgang */
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+    /* Zachte overgang */
     flex-shrink: 0;
 }
 
 
 .project img {
-    
-    max-height: 270px; 
-    max-width: 270px;/* Zorg ervoor dat de afbeelding past in de kleinere hoogte */
+
+    max-height: 270px;
+    max-width: 270px;
+    /* Zorg ervoor dat de afbeelding past in de kleinere hoogte */
     object-fit: contain;
-    
+
     margin-bottom: 10px;
 }
 
@@ -586,7 +727,7 @@ h2 {
     color: #333;
     text-decoration: none;
     font-weight: 600;
-   
+
 }
 
 .project-description {
@@ -602,50 +743,58 @@ h2 {
 }
 
 .project:hover {
-    height: 500px; /* Volledige hoogte bij hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Iets grotere schaduw bij hover */
+    height: 500px;
+    /* Volledige hoogte bij hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* Iets grotere schaduw bij hover */
 }
 
 .project-description,
 .project-skills {
-    max-height: 0; /* Collapse height by default */
+    max-height: 0;
+    /* Collapse height by default */
     overflow: hidden;
-    opacity: 0; 
-    transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition for both */
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    /* Smooth transition for both */
 }
 
 .project:hover .project-description,
 .project:hover .project-skills {
     opacity: 1;
-    max-height: 100px; 
+    max-height: 100px;
 }
 
 
 
 .pet {
-    height: 500px; /* Initial height for mobile */
+    height: 500px;
+    /* Initial height for mobile */
     background-color: #fff;
     background-image: url(../images/mountains.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center bottom; /* Aligns image to bottom */
+    background-position: center bottom;
+    /* Aligns image to bottom */
 
     text-align: center;
-    
+
 }
 
-.pet h2{
+.pet h2 {
     padding-top: 40px;
-    
+
 }
 
 .pet p {
     margin: 0 32px;
 }
 
-a, h2, p {
+a,
+h2,
+p {
     text-decoration: none;
-    
+
 }
 
 
@@ -780,13 +929,14 @@ a, h2, p {
 
 .photo-item img {
     position: absolute;
-    
+
     width: 100%;
     height: 100%;
-    
+
     border-radius: 8px;
 
-    object-fit: cover; /* Laat de afbeelding de container vullen */
+    object-fit: cover;
+    /* Laat de afbeelding de container vullen */
     object-position: center
 }
 
@@ -809,16 +959,18 @@ a, h2, p {
 
 .photo-item:hover .overlay-text {
     opacity: 1;
-    
+
 }
 
---- /*photos goed zetten*/
+---
+
+/*photos goed zetten*/
 .portret5 {
     object-fit: cover;
     object-position: 30% 50%;
 }
- 
-    
+
+
 
 
 
@@ -859,12 +1011,12 @@ footer {
     gap: 15px;
 }
 
-.tiny-nav a{
+.tiny-nav a {
     text-decoration: none;
     color: #333;
 }
 
-.tiny-nav a:hover{
+.tiny-nav a:hover {
     scale: 1.2;
 }
 
@@ -875,13 +1027,13 @@ footer {
     gap: 7px;
 }
 
-.social-icons svg{
+.social-icons svg {
     width: 30px;
     height: 30px;
-    
+
 }
 
-.social-icons svg:hover{
+.social-icons svg:hover {
     width: 35px;
     height: 35px;
 }
@@ -916,50 +1068,97 @@ footer p {
 /* Min-width: 700px */
 @media (min-width: 700px) {
 
+
+
+
+/* Algemene styling voor de navbar */
+.navbar {
+    display: flex;
+    align-items: center; /* Verticaal centreren van logo, links en knop */
+    justify-content: space-between; /* Ruimte verdelen tussen de drie secties */
+    background-color: #F3EDE7; /* Achtergrondkleur */
+    width: 100%; /* Volledige breedte */
+    position: fixed; /* Vast aan de bovenkant */
+    top: 0;
+    left: 0;
+    z-index: 3; /* Zorgt dat de navbar boven andere elementen staat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtiele schaduw */
+    padding: 20px 30px; /* Extra padding voor een nette weergave */
+}
+
+/* Logo styling */
+#logo img {
+    max-width: 120px;
+    height: auto;
+
+    margin-top: 15px;
     
+}
 
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* Zorgt ervoor dat logo en button aan de uiteinden staan */
-        padding: 10px; /* Pas padding aan naar wens */
-    }
 
-    .navmenu {
-        display: flex;
-        justify-content: center; /* Centreer de navmenu-items */
-        margin: 0; /* Verwijder marge */
-        padding: 0; /* Verwijder padding */
-    }
+.navmenu #btn-in {
+    display: none !important;
+}
 
-    .navbar a {
-        padding: 0 15px; /* Ruimte tussen de links */
-        color: #333; /* Kleur van de links */
-        text-decoration: none;
-        font-size: 14px;
-    }
 
-    #logo img {
-        max-width: 100px;
-        
-        /*NOG FIXEN DAT LOGO MEER NAAR RECHTS GAAT, EVENALS IMAGE */
-    }
-
-    /* Zorg ervoor dat de button aan de rechterkant staat */
-    .navbar #btn {
-        background-color: #c5cfb8;
-        padding: 10px 10px;
-        border-radius: 16px;
-        text-decoration: none;
-        color: #333;
-        font-size: 14px; /* Kleinere fontgrootte voor deze knop */
-        margin-right: 20px;
-        margin-top: 5px;
-    }
-    
-    
+.navmenu {
+    display: flex; /* Zet links naast elkaar */
+    flex-direction: row;
+    position: relative;
+    box-shadow: none; 
+    border-radius: 0px;
+    justify-content: center; /* Centreer de navigatielinks horizontaal */
+    align-items: center; /* Verticaal centreren van de navigatielinks */
+    z-index: 1; /* Zorgt dat de navigatie boven andere elementen staat */
+    margin-left: 150px; /* Extra ruimte links */
+    gap: 40px;
+    top: 0;
 
     
+}
+
+
+.navmenu a {
+    color: #333; /* Standaard tekstkleur */
+    text-decoration: none; /* Verwijder onderlijning */
+    font-size: 16px; /* Grotere tekst voor tabletweergave */
+    
+    transition: color 0.3s ease; /* Visuele feedback bij hover */
+}
+
+.navmenu a:hover {
+    color: #666; /* Kleur verandering bij hover */
+}
+
+
+
+/* Hamburger verborgen op tablets */
+.hamburger {
+    display: none;
+}
+
+/* Button aan de rechterkant */
+.navbar #btn {
+    display: flex;
+    background-color: #c5cfb8;
+    padding: 10px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+
+    margin-right: 70px;
+   
+   
+    transition: background-color 0.3s ease;
+}
+
+.navbar #btn:hover {
+    background-color: #a4b69d; /* Kleur verandering bij hover */
+}
+
+
+
 
     /*.navbar a.active::after {
         content: '';
@@ -971,7 +1170,7 @@ footer p {
         background-color: #c5cfb8;
     } werkt nog niet*/
 
-    
+
 
 
 
@@ -979,12 +1178,12 @@ footer p {
 
 
     header {
-        
+
         margin-top: 0px;
     }
 
 
-     .head {
+    .head {
         height: 100vh;
         background-size: cover;
     }
@@ -1086,30 +1285,34 @@ footer p {
 
 
     .last {
-        display: flex; 
-        justify-content: space-between; 
-        align-items: flex-start; 
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
         gap: 20px;
-        
+
         height: auto;
     }
 
-    .story, .contact {
-        flex: 1; /* Laat beide secties gelijk groeien */
-        max-width: 55%; /* Zorg dat ze maximaal 48% van de breedte innemen */
+    .story,
+    .contact {
+        flex: 1;
+        /* Laat beide secties gelijk groeien */
+        max-width: 55%;
+        /* Zorg dat ze maximaal 48% van de breedte innemen */
         padding-bottom: 50px;
-        height: auto; /* Hoogte aanpassen aan de inhoud */
+        height: auto;
+        /* Hoogte aanpassen aan de inhoud */
         padding-left: 16px;
         padding-right: 16px;
     }
 
 
 
-    
+
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        
+
     }
 
 
@@ -1122,7 +1325,7 @@ footer p {
         align-items: flex-end;
         z-index: 1000;
     }
-    
+
 
     .side-nav a {
         margin-top: -20px;
@@ -1132,9 +1335,11 @@ footer p {
     .nav-item {
         display: flex;
         align-items: center;
-        justify-content: flex-start; /* Zorgt ervoor dat tekst links staat */
-        text-decoration: none; /* Verwijder onderstreping van de link */
-       
+        justify-content: flex-start;
+        /* Zorgt ervoor dat tekst links staat */
+        text-decoration: none;
+        /* Verwijder onderstreping van de link */
+
     }
 
     .section-name:hover {
@@ -1142,14 +1347,15 @@ footer p {
         transform: scale(1.1);
     }
 
-    
+
     .section-name {
-        margin-right: 10px; /* Ruimte tussen tekst en dot */
+        margin-right: 10px;
+        /* Ruimte tussen tekst en dot */
         font-size: 14px;
         color: #333;
-        
+
     }
-    
+
     .dot {
         width: 12.5px;
         height: 12.5px;
@@ -1158,7 +1364,7 @@ footer p {
         display: inline-block;
     }
 
-    
+
 
     .line {
         width: 2px;
@@ -1176,11 +1382,11 @@ footer p {
 
     .pet {
         height: 600px;
-        
+
     }
-   
-    
-    
+
+
+
 
 }
 
@@ -1204,10 +1410,10 @@ footer p {
 
     .footer {
         margin-top: 290px;
-        
+
     }
 
-    .footer-container a{
+    .footer-container a {
         font-size: 24px;
     }
 
@@ -1217,15 +1423,18 @@ footer p {
     }
 
     .navbar {
-        
-        padding: 12px; /* Pas padding aan naar wens */
+
+        padding: 12px;
+        /* Pas padding aan naar wens */
     }
 
-    
+
 
     .navbar a {
-        padding: 0 18px; /* Ruimte tussen de links */
-        color: #333; /* Kleur van de links */
+        padding: 0 18px;
+        /* Ruimte tussen de links */
+        color: #333;
+        /* Kleur van de links */
         text-decoration: none;
         font-size: 16px;
     }
@@ -1233,7 +1442,7 @@ footer p {
     #logo img {
         max-width: 110px;
         margin-top: 6px;
-        
+
         /*NOG FIXEN DAT LOGO MEER NAAR RECHTS GAAT, EVENALS IMAGE */
     }
 
@@ -1242,8 +1451,9 @@ footer p {
         background-color: #c5cfb8;
         padding: 10px 20px;
         border-radius: 20px;
-        
-        font-size: 16px; /* Kleinere fontgrootte voor deze knop */
+
+        font-size: 16px;
+        /* Kleinere fontgrootte voor deze knop */
         margin-right: 24px;
         margin-top: 6px;
     }
@@ -1358,8 +1568,9 @@ footer p {
         /* 60% van de breedte voor de tekst */
     }
 
-    .story, .contact {
-        
+    .story,
+    .contact {
+
         padding-left: 32px;
         padding-right: 32px;
 
@@ -1388,22 +1599,22 @@ footer p {
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 5%;
-        
+
     }
 
-    .photo-grid{
+    .photo-grid {
         padding-bottom: 200px;
-        
+
     }
 
-  
+
 
     .pet {
         height: 800px;
-        
+
     }
 
-    .pet h2{
+    .pet h2 {
         padding-top: 100px;
         padding-bottom: 20px;
     }
