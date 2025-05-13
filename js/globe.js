@@ -117,41 +117,53 @@ document.addEventListener('DOMContentLoaded', () => {
     makeDropPin(50.8503,    4.3517,   'Belgium',     'https://500px.com/p/amybruyninckx/galleries/fotoshoots')
   ];
 
-  // ————— 8) Raycaster & pointer helpers —————
-  const raycaster = new THREE.Raycaster();
-  const pointer   = new THREE.Vector2();
+  // 8) Raycaster & click‐handler
+const raycaster = new THREE.Raycaster();
+const pointer   = new THREE.Vector2();
 
-  function updatePointer(event) {
-    const rect = renderer.domElement.getBoundingClientRect();
-    pointer.x = ((event.clientX - rect.left) / rect.width)  * 2 - 1;
-    pointer.y = -((event.clientY - rect.top)  / rect.height) * 2 + 1;
-    return { x: event.clientX, y: event.clientY };
+// zorg dat onze canvas pointer-events wél krijgt
+renderer.domElement.style.touchAction = 'none';
+
+function updatePointer(event) {
+  const rect = renderer.domElement.getBoundingClientRect();
+  // voor zowel mouse als touch/pointer
+  const x = (event.touches ? event.touches[0].clientX : event.clientX);
+  const y = (event.touches ? event.touches[0].clientY : event.clientY);
+  pointer.x = ((x - rect.left) / rect.width)  * 2 - 1;
+  pointer.y = -((y - rect.top)  / rect.height) * 2 + 1;
+  return { x, y };
+}
+
+function onClick(event) {
+  const { x, y } = updatePointer(event);
+  raycaster.setFromCamera(pointer, camera);
+  const hit = raycaster.intersectObjects(pins, true)
+                    .find(i => i.object.userData.href);
+  if (hit) window.open(hit.object.userData.href, '_blank');
+}
+
+// luister op meerdere events zodat touch het ook doet
+renderer.domElement.addEventListener('click', onClick, { passive: true });
+renderer.domElement.addEventListener('pointerdown', onClick, { passive: true });
+renderer.domElement.addEventListener('touchstart', onClick, { passive: true });
+
+// 9) Hover‐handler (tooltip blijft pointermove gebruiken)
+renderer.domElement.addEventListener('pointermove', event => {
+  const { x, y } = updatePointer(event);
+  raycaster.setFromCamera(pointer, camera);
+  const hit = raycaster.intersectObjects(pins, true)
+                    .find(i => i.object.userData.label);
+  if (hit) {
+    tooltip.style.display = 'block';
+    tooltip.textContent = hit.object.userData.label;
+    tooltip.style.left = (x + 8) + 'px';
+    tooltip.style.top  = (y + 8) + 'px';
+  } else {
+    tooltip.style.display = 'none';
   }
+}, { passive: true });
 
-  // — Click‐handler
-  renderer.domElement.addEventListener('click', event => {
-    const { x, y } = updatePointer(event);
-    raycaster.setFromCamera(pointer, camera);
-    const hit = raycaster.intersectObjects(pins, true)
-                      .find(i => i.object.userData.href);
-    if (hit) window.open(hit.object.userData.href, '_blank');
-  }, { passive: true });
 
-  // — Hover‐handler voor tooltip
-  renderer.domElement.addEventListener('pointermove', event => {
-    const { x, y } = updatePointer(event);
-    raycaster.setFromCamera(pointer, camera);
-    const hit = raycaster.intersectObjects(pins, true)
-                      .find(i => i.object.userData.label);
-    if (hit) {
-      tooltip.style.display = 'block';
-      tooltip.textContent = hit.object.userData.label;
-      tooltip.style.left = (x + 8) + 'px';
-      tooltip.style.top  = (y + 8) + 'px';
-    } else {
-      tooltip.style.display = 'none';
-    }
-  }, { passive: true });
 
   // ————— 9) Controls —————
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
