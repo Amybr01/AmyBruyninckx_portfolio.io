@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 7) Jouw vier pins
-  const pins = [
-    makeDropPin(37.7749, -122.4194, 'West America', 'https://example.com/west-america'),
-    makeDropPin(7.8731,    80.7718,   'Sri Lanka',   'https://example.com/sri-lanka'),
-    makeDropPin(15.8700,  100.9925,   'Thailand',    'https://example.com/thailand'),
-    makeDropPin(50.8503,    4.3517,   'Belgium',     'https://example.com/belgium')
+   const pins = [
+    makeDropPin(37.7749, -122.4194, 'West America', 'https://500px.com/p/amybruyninckx/galleries/usa'),
+    makeDropPin(7.8731,    80.7718,   'Sri Lanka',   'https://500px.com/p/amybruyninckx/galleries/sri-lanka'),
+    makeDropPin(15.8700,  100.9925,   'Thailand',    'https://500px.com/p/amybruyninckx/galleries/thailand'),
+    makeDropPin(50.8503,    4.3517,   'Belgium',     'https://500px.com/p/amybruyninckx/galleries/fotoshoots')
   ];
 
   // 8) Raycaster & pointer helpers
