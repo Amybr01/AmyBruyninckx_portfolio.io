@@ -23,7 +23,7 @@ body {
     align-items: center;
     background-color: #f3ede7;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -51,8 +51,8 @@ body {
     flex-direction: column;
     background-color: #f3ede7;
     position: absolute;
-    top: 119px;
-    right: 50px;
+    top: 98px;
+    right: 40px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
@@ -176,6 +176,7 @@ header {
     display: inline-block;
     padding: 15px 30px;
     background-color: #c5cfb8;
+    color: #333;
     text-decoration: none;
     border-radius: 32px;
 }
