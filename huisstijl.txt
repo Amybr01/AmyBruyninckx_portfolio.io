@@ -1,0 +1,32 @@
+Colors: 
+    Beige: 
+    White: 
+    Black: 
+    Light-green: 
+    Terracotta:
+
+Fonts: 
+
+
+Font-sizes: 
+    MOBILE:
+        H1: 32px
+        H2: 22px
+        H3: 18px
+        Body: 16px
+        Speciallekes: 18px
+
+    TABLET:
+        H1: 36px
+        H2: 24px
+        H3: 20px
+        Body: 16px
+    WEB:
+        H1: 42px
+        H2: 28px
+        H3: 22px
+        Body: 16px
+
+
+
+     -- Nakijken hoe vaak ik headers gebruik en waar. Dit evt aanpassen! 
