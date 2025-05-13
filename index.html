@@ -152,26 +152,29 @@
 
 
         <div class="contact">
-            <h2>Contact me</h2>
+            <h2>Explore the world through my lens</h2>
+            <div id="pin-tooltip" style="
+       position:absolute;
+       pointer-events:none;
+       background:rgba(0,0,0,0.7);
+       color:#fff;
+       padding:4px 8px;
+       border-radius:4px;
+       font-size:18px;
+       display:none;
+       white-space:nowrap;
+       z-index:1000;
+     "></div>
+            <div id="globe" class="globe-container"></div>
 
-            <p>Feel free to reach out to me via email or connect on social media! :)</p>
-            <p>Email: <a class="reference" href="mailto:by.amy@hotmail.com">by.amy@hotmail.com</a></p>
+               <p class="text-globe">*You can drag the globe to rotate it, hover over the pins for location names, and click on them to explore each spot.</p>
+            
+
+            <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+            <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
 
-            <p>Download my <a class="reference" href="docs/CV_Bruyninckx_Amy.pdf" download>CV</a></p>
-
-
-            <div class="experience">
-                <h3>Experiences:</h3>
-                <div class="image-container">
-                    <div>
-                        <img src="images/image.png" alt="GLS classroom badge">
-                    </div>
-                    <div>
-                        <img class="corners" src="images/bootcamp.png" alt="bootcamp badge">
-                    </div>
-                </div>
-            </div>
+            <script src="js/globe.js"></script>
 
 
         </div>
@@ -276,7 +279,7 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            
+
             const words = [
                 "Creative",
                 "Adventurous",
@@ -290,7 +293,7 @@
                 wordElement.classList.add('roll-up');
                 setTimeout(() => {
                     wordElement.textContent = words[index];
-        
+
                     wordElement.classList.remove('roll-up');
                 }, 500);
 
