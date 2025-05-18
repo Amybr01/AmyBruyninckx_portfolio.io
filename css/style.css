@@ -237,115 +237,125 @@ header {
 
 
 .selected-work {
-  background-color: #f9f9f9;
-  padding: 6px 16px 32px 16px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #f9f9f9;
+    padding: 6px 16px 32px 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .selected-work h2 {
-  font-size: 24px;
-  margin-bottom: 12px;
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 
 .carousel {
-  position: relative;
-  overflow: hidden;
-  
+    position: relative;
+    overflow: hidden;
+
 }
 
 
 .carousel .work-items {
-  display: flex;
-  gap: 24px;
-  transform: translateX(0);
-  transition: transform 0.5s ease;
-  padding-bottom: 2rem;
+    display: flex;
+    gap: 24px;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    padding-bottom: 2rem;
 }
 
 
 .carousel .work-item {
- 
-  flex: 0 0 clamp(250px, 90%, 450px);
-  max-width: 450px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  min-height: 400px;
-  text-align: center;
-  box-sizing: border-box;
+
+    flex: 0 0 clamp(250px, 90%, 450px);
+    max-width: 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 
 
 .carousel .work-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  margin-bottom: 15px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
+
 .carousel .work-item h3 {
-  font-size: 20px;
-  margin: 0 auto 10px;
+    font-size: 20px;
+    margin: 0 auto 10px;
 }
+
 .carousel .work-item p {
-  font-size: 16px;
-  text-align: left;
-  margin: 10px 20px 40px;
-  flex-shrink: 0;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 20px 40px;
+    flex-shrink: 0;
 }
+
 .carousel .work-item a {
-  margin-top: auto;
-  padding: 15px 25px;
-  background-color: #c5cfb8;
-  color: #333;
-  text-decoration: none;
-  border-radius: 32px;
-  font-size: 16px;
-  transition: background-color .3s, transform .2s;
+    margin-top: auto;
+    padding: 15px 25px;
+    background-color: #c5cfb8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 32px;
+    font-size: 16px;
+    transition: background-color .3s, transform .2s;
 }
+
 .carousel .work-item a:hover {
-  transform: translateY(-2px);
-  opacity: .9;
+    transform: transla teY(-2px);
+    opacity: .9;
 }
 
 
 .carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 100%;
-  border: 2px solid rgba(210,120,75,0.4);
-  background-color: rgba(210,120,75,0.4);
-  color: #d2784b;
-  font-size: 1.5rem;
-    align-items: center;      
-  justify-content: center;  
-  cursor: pointer;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    border: 2px solid #DA916C;
+    background-color: #DA916C;
+    color: #211008;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-button svg {
-  width: 26px;              
-  height: 26px;
-  display: block;             
+    width: 26px;
+    height: 26px;
+    display: block;
 }
-.carousel-button:hover {
-  background-color: rgba(210,120,75,0.6);
+
+
+
+.prev {
+    left: 0.3rem;
 }
-/* afstand van de zijkant */
-.prev { left: 0.3rem; }
-.next { right: 0.3rem; }
+
+.next {
+    right: 0.3rem;
+}
 
 /* verberg wanneer je niet meer kunt klikken */
 .prev[style*="display: none"],
 .next[style*="display: none"] {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 
@@ -401,7 +411,7 @@ h2 {
 
 .last {
     background-color: #F9F9F9;
-    height: 1200px;
+    height: 1250px;
 }
 
 .story {
@@ -476,7 +486,6 @@ h2 {
 
 #globe {
     position: relative;
-    /* vervang 60px door de hoogte van je navbar */
     z-index: -2;
 }
 
@@ -484,6 +493,7 @@ h2 {
     font-style: italic;
     max-width: 90%;
     font-size: 14px;
+
 
 }
 
@@ -790,6 +800,7 @@ footer {
     position: relative;
     bottom: 0;
     padding: 20px 10%;
+
 }
 
 .footer-container {
@@ -954,13 +965,13 @@ footer p {
         display: flex;
         flex-direction: column;
         gap: 80px;
-        
+
 
     }
 
     .dynamic-type {
         font-size: 22px;
-        
+
     }
 
     .header-links {
@@ -994,29 +1005,61 @@ footer p {
 
     /*----------------------------------------------------------------------*/
 
+
     .selected-work h2 {
-    font-size: 28px;
-    margin: 1% 0;
+        font-size: 28px;
+        margin: 3% 0;
+    }
+
+    .carousel .work-items {
+        gap: 48px;
+        padding-bottom: 4.5rem;
+    }
+
+    .carousel-button {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .carousel .work-item img {
+        margin-bottom: 28px;
+        
+    }
+
+    .carousel .work-item h3 {
+        margin: 0 auto 24px;
+        font-size: 22px;
+        
+    }
+
+    .carousel .work-item p {
+        margin: 0 24px 32px;
+       
+    }
+
+    .carousel .work-item a {
+    
+    font-size: 18px;
+    
 }
-    .work-items {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    .carousel-button svg {
+        width: 32px;
+        height: 32px;
+
     }
 
-    .work-item {
-        flex: 1 1 450px;
-        margin-bottom: 40px;
-        max-width: 450px;
+    .prev {
+        left: 0.5rem;
     }
 
-    .work-item img {
-        width: 100%;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        height: 300px;
-        object-fit: cover;
+    .next {
+        right: 0.5rem;
     }
+
+
+
+    /*----------------------------------------------------------------------*/
 
     .rounded-section {
         flex-direction: row;
