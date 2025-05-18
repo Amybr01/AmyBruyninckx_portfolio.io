@@ -979,6 +979,10 @@ footer p {
 
     /*----------------------------------------------------------------------*/
 
+    .selected-work h2 {
+    font-size: 28px;
+    margin: 1% 0;
+}
     .work-items {
         flex-direction: row;
         flex-wrap: wrap;
@@ -986,9 +990,9 @@ footer p {
     }
 
     .work-item {
-        flex: 1 1 350px;
+        flex: 1 1 450px;
         margin-bottom: 40px;
-        max-width: 350px;
+        max-width: 450px;
     }
 
     .work-item img {

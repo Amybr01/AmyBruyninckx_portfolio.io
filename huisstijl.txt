@@ -18,9 +18,10 @@ Font-sizes:
 
     TABLET:
         H1: 36px
-        H2: 24px
+        H2: 28px
         H3: 20px
         Body: 16px
+        Speciallekes: 20px
     WEB:
         H1: 42px
         H2: 28px
