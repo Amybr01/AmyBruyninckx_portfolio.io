@@ -918,6 +918,7 @@ footer p {
 
     header {
         margin-top: -20px;
+        background-color: #cdd5c3;
 
     }
 
@@ -932,12 +933,13 @@ footer p {
 
     .header-content {
         bottom: auto;
-        top: 650px;
+        top: 55%;
         left: 32px;
         right: 32px;
         display: flex;
         flex-direction: column;
         gap: 80px;
+        
 
     }
 
