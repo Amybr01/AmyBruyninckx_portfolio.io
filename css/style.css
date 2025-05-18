@@ -102,7 +102,7 @@ header {
     padding: 0;
     text-align: center;
     margin-top: 100px;
-    
+
 }
 
 
@@ -130,46 +130,48 @@ header {
 
 .text {
     z-index: 2;
-    text-align: left;    
+    text-align: left;
 }
 
 
 .begin {
     font-size: 32px;
     font-weight: 600;
-    
+
 }
 
 .dynamic-type {
-  font-size: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-left: 2px;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 2px;
 }
 
 .cursor {
-  display: inline-block;
-  margin-left: 2px;
-  animation: blink 0.8s step-end infinite;
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 0.8s step-end infinite;
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 .dynamic-type #typewriter {
-  font-style: italic;
+    font-style: italic;
 }
 
 
 
 .header-links {
-  display: flex;
-  justify-content: center;  
-  gap: 20px;                 
-  margin-top: 30px;
-  margin-bottom: 20px;
-  
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
 }
 
 
@@ -183,52 +185,52 @@ header {
 }
 
 .quote {
-  font-style: italic;
-  font-weight: lighter;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  font-size: 1.2rem;     
-  line-height: 1.4;
+    font-style: italic;
+    font-weight: lighter;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 
 .quote-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;      
-  margin: 1.5em auto;
-  max-width: 90%;
-  text-align: center;
-  padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 1.5em auto;
+    max-width: 90%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 
 .highlight {
-  position: relative;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+    position: relative;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 
 .highlight::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  right: 0;
- 
-  height: 0.7em;
-  
-  top: 0.55em;
-  background-color: rgba(210,120,75,0.4);
+    content: "";
+    position: absolute;
+    left: -6px;
+    right: 0;
 
-  transform: skew(-8deg);
-  transform-origin: left center;
-  z-index: -1;
- 
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+    height: 0.7em;
+
+    top: 0.55em;
+    background-color: rgba(210, 120, 75, 0.4);
+
+    transform: skew(-8deg);
+    transform-origin: left center;
+    z-index: -1;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 /*-----------INDEX - WORK -----------------*/
@@ -236,99 +238,99 @@ header {
 
 
 .selected-work {
-  background-color: #f9f9f9;
-  padding: 42px 16px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    padding: 42px 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
 .selected-work h2 {
-  font-size: 24px;
-  margin: 1% 0;
+    font-size: 24px;
+    margin: 1% 0;
 }
 
 
 .work-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;  
-  gap: 50px;
-  margin: 5% auto;          
-  max-width: 1200px;        
-  padding: 0 20px;          
-  box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin: 5% auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 
 .work-item {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;        
-  box-sizing: border-box;
-  min-height: 400px;
-  text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 400px;
+    text-align: center;
 }
 
 
 .work-item img {
-  display: block;
-  width: 100%;              
-  height: 250px;            
-  object-fit: cover;        
-  margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
 
 }
 
 
 .work-item h3 {
-  font-size: 20px;
-  margin: 0 auto 10px;
-  padding-top: 10px;
+    font-size: 20px;
+    margin: 0 auto 10px;
+    padding-top: 10px;
 }
 
 
 .work-item p {
-  font-size: 16px;
-  text-align: left;
-  margin: 10px 20px 40px;
-  flex-shrink: 0;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 20px 40px;
+    flex-shrink: 0;
 }
 
 
 .work-item a {
-  display: inline-block;
-  margin-top: auto;       
-  margin-left: auto;
-  margin-right: auto;      
-  padding: 15px 25px;
-  background-color: #c5cfb8;
-  color: #333;
-  text-decoration: none;
-  border-radius: 32px;
-  font-size: 16px;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 25px;
+    background-color: #c5cfb8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 32px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .work-item a:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 
 .work-item:hover {
-  transform: scale(1.02) translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 .mustang {
-  object-position: 30% 0;
+    object-position: 30% 0;
 }
 
 
@@ -337,7 +339,7 @@ header {
 
 .rounded-section {
     border-radius: 4px;
-    
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -362,14 +364,14 @@ h2 {
     display: inline-block;
     color: #d2784b;
     padding-bottom: 20px;
-    
+
 }
 
 
 .flex {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .dynamic img {
@@ -439,35 +441,35 @@ h2 {
     background-color: #F9F9F9;
     margin-left: 20px;
     max-width: 100%;
-   
+
     margin-bottom: 20px;
 }
 
 
-h2{
+h2 {
     margin-left: 0px;
     font-size: 24px;
-text-align: center;
+    text-align: center;
 }
 
 .globe-container {
-  
- 
+
+
     width: 100%;
-  height: 400px;       
+    height: 400px;
 }
 
 #globe {
-  position: relative;
-   /* vervang 60px door de hoogte van je navbar */
-  z-index: -2;     
+    position: relative;
+    /* vervang 60px door de hoogte van je navbar */
+    z-index: -2;
 }
 
-.text-globe{
+.text-globe {
     font-style: italic;
     max-width: 90%;
     font-size: 14px;
-    
+
 }
 
 
@@ -744,21 +746,21 @@ p {
 
 .photo-item,
 .pixels-photo {
-  position: relative;
-  padding-bottom: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #D3D3D3;
+    position: relative;
+    padding-bottom: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #D3D3D3;
 }
 
 .pixels-photo img,
 .pixels-photo iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -837,13 +839,12 @@ footer p {
 
 
 
-
-
-
 /*----------------------------------------------------------------------*/
-/* Min-width: 700px */
-@media (min-width: 700px) {
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
 
+@media (min-width: 770px) {
     .navbar {
         display: flex;
         align-items: center;
@@ -855,11 +856,11 @@ footer p {
         left: 0;
         z-index: 3;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
+        padding: 10px 25px;
     }
 
     #logo img {
-        max-width: 120px;
+        max-width: 100px;
         height: auto;
         margin-top: 15px;
     }
@@ -913,42 +914,68 @@ footer p {
         background-color: #a4b69d;
     }
 
+    /*----------------------------------------------------------------------*/
+
     header {
-        margin-top: 0px;
+        margin-top: -20px;
+
     }
 
     .head {
-        height: 100vh;
+        height: 90vh;
         background-size: cover;
     }
 
     .begin {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .header-content {
-        position: absolute;
-        bottom: 10%;
-        gap: 30px;
-        z-index: 2;
+        bottom: auto;
+        top: 650px;
+        left: 32px;
+        right: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+    }
+
+    .dynamic-type {
+        font-size: 22px;
+        
+    }
+
+    .header-links {
+        gap: 42px;
+        margin-top: 0px;
+    }
+
+    .header-links a {
+        padding: 18px 36px;
+        font-size: 20px;
+        border-radius: 36px;
     }
 
     .quote-container {
-    flex-direction: row;
-    justify-content: center;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 20px;
     }
 
     .highlight {
-        margin-top: 50px;
         text-align: center;
-        font-size: 28px;
+        font-size: 24px;
         max-width: 100%;
+        margin-top: -32px;
     }
 
     .highlight::before {
-        height: 15px;
-        top: 20px;
+        height: 16px;
+        top: 16px;
     }
+
+    /*----------------------------------------------------------------------*/
 
     .work-items {
         flex-direction: row;
@@ -1011,6 +1038,8 @@ footer p {
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    /*----------------------------------------------------------------------*/
 
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1080,8 +1109,12 @@ footer p {
 
 
 
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
 
-/* Min-width 900px */
 @media (min-width: 1100px) {
 
     header {
@@ -1160,7 +1193,7 @@ footer p {
         font-size: 32px;
         min-width: 100%;
         grid-area: quote;
-        
+
     }
 
     .quote::after {
@@ -1246,5 +1279,3 @@ li, blockquote, figcaption {
 body * {
   color: #251b18 !important;
 }*/
-
-
