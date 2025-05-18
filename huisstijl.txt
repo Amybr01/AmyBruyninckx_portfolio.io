@@ -1,7 +1,7 @@
 Colors: 
     Beige: 
     White: 
-    Black: 
+    Black: #211008
     Light-green: 
     Terracotta:
 
