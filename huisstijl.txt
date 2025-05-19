@@ -24,10 +24,10 @@ Font-sizes:
         Speciallekes: 20px
     WEB:
         H1: 42px
-        H2: 28px
-        H3: 22px
+        H2: 32px
+        H3: 24px
         Body: 16px
-
+    Speciallekes: 26px
 
 
      -- Nakijken hoe vaak ik headers gebruik en waar. Dit evt aanpassen! 
