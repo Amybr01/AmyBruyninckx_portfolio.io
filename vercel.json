@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "^/.*\\.(png|jpe?g|gif|svg)$",
+      "source": "/:any*\\.(png|jpe?g|gif|svg)",
       "headers": [
         {
           "key": "X-Robots-Tag",
