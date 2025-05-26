@@ -695,7 +695,7 @@ p {
 
 .photography h2 {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     font-size: 24px;
 }
 
@@ -1201,14 +1201,20 @@ footer p {
         font-size: 28px;
     }
 
+    .photography h2 {
+        margin-top: 5%;
+        margin-bottom: 2%;
+        font-size: 24px;
+    }
+
     .photo {
         height: 750px;
 
     }
 
     .slider-row {
-    margin: 6% 0;
-}
+        margin: 6% 0;
+    }
 
     .slider {
         margin-bottom: 25px;
@@ -1438,13 +1444,53 @@ footer p {
 
     /*============================================================*/
 
-    .photo-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5%;
-        padding-bottom: 200px;
+
+    .slider h2,
+    .photography h2 {
+        font-size: 32px;
+        margin-top: 6%;
+    }
+
+    .photo {
+        height: 900px;
+
+    }
+
+    .slider-row {
+        margin: 3% 0;
+    }
+
+    .slider {
+        margin-bottom: 25px;
+    }
+
+    .slider-row:not(.small) .slider-track img {
+        flex: none;
+        width: calc(25% - 20px);
+        margin: 0 10px;
     }
 
 
+    .slider-row.small .slider-track img {
+        flex: none;
+        width: calc(20% - 15px);
+        margin: 0 7px;
+    }
+
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3%;
+        padding-bottom: 200px;
+    }
+
+    .photo-grid {
+
+        max-width: 80%;
+
+    }
+
+    /*============================================================*/
 
 
     .pet {
