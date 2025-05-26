@@ -630,7 +630,7 @@ p {
     background-repeat: no-repeat;
     opacity: 85%;
     width: 100vw;
-    height: 950px;
+    height: 770px;
 }
 
 
@@ -691,7 +691,6 @@ p {
 
 .photography h2 {
     text-align: center;
-    margin-top: 10%;
     margin-bottom: 5%;
     font-size: 24px;
 }
@@ -809,19 +808,19 @@ p {
   transform: scaleX(-1);
   transform-origin: center;
 }
-/* Wrapper en overflow blijven zoals ze waren */
+
 .pixels-photo.shift-down {
   position: relative;
   overflow: hidden;
 }
 
-/* Iframe vergroten & omhoog schuiven */
+
 .pixels-photo.shift-down iframe {
   position: absolute;
-  top: 0%;       /* schuift het iframe 15% omhoog */
+  top: 0%;  
   left: 0;
   width: 100%;
-  height: 150%;    /* vergroot iframe naar 130% van de containerhoogte */
+  height: 150%;  
   border: none;
   border-radius: inherit;
 }
@@ -831,12 +830,12 @@ p {
   overflow: hidden;
 }
 
-/* Iframe vergroten & naar rechts schuiven */
+
 .pixels-photo.shift-right iframe {
   position: absolute;
   top: 0;
-  left: 0%;     /* schuift de iframe 20% naar links, waardoor het beeld naar rechts komt */
-  width: 145%;    /* vergroot iframe zodat je volle breedte behoudt */
+  left: 0%;  
+  width: 145%;   
   height: 100%;
   border: none;
   border-radius: inherit;
