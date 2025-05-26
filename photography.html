@@ -94,6 +94,7 @@
   <article>
     <h2>Portraits</h2>
     <section class="photo-gallery">
+      
       <div class="photo-grid">
 
         <div class='pixels-photo'>
@@ -226,41 +227,36 @@
       });
     });
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.slider-row').forEach(row => {
-    const track     = row.querySelector('.slider-track');
-    const originals = Array.from(track.children);
-    const count     = originals.length;
+    //CAROUSEL
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.slider-row').forEach(row => {
+        const track = row.querySelector('.slider-track');
+        const originals = Array.from(track.children);
+        const count = originals.length;
+        originals.forEach(el => track.append(el.cloneNode(true)));
+        const style = getComputedStyle(originals[0]);
+        const w = originals[0].getBoundingClientRect().width;
+        const ml = parseFloat(style.marginLeft);
+        const mr = parseFloat(style.marginRight);
+        const slideW = w + ml + mr;
+        const resetAt = slideW * count;
 
-    // infinite-loop clones
-    originals.forEach(el => track.append(el.cloneNode(true)));
+        let offset = 0;
+        const speed = 0.5;
+        const reverse = row.classList.contains('small');
 
-    // bereken slide-breedte incl. marge
-    const style   = getComputedStyle(originals[0]);
-    const w       = originals[0].getBoundingClientRect().width;
-    const ml      = parseFloat(style.marginLeft);
-    const mr      = parseFloat(style.marginRight);
-    const slideW  = w + ml + mr;
-    const resetAt = slideW * count;
-
-    let offset = 0;
-    const speed   = 0.5; 
-    const reverse = row.classList.contains('small');
-
-    function loop() {
-      offset = (offset + speed) % resetAt;
-      if (reverse) {
-        // eerst flip de track, daarna translate; in combinatie met
-        // de omgedraaide plaatjes (CSS) scrollt het naar rechts
-        track.style.transform = `scaleX(-1) translateX(${-offset}px)`;
-      } else {
-        track.style.transform = `translateX(${-offset}px)`;
-      }
-      requestAnimationFrame(loop);
-    }
-    loop();
-  });
-});
+        function loop() {
+          offset = (offset + speed) % resetAt;
+          if (reverse) {
+            track.style.transform = `scaleX(-1) translateX(${-offset}px)`;
+          } else {
+            track.style.transform = `translateX(${-offset}px)`;
+          }
+          requestAnimationFrame(loop);
+        }
+        loop();
+      });
+    });
 
     /*// streepje onder actieve pagina
      document.addEventListener('DOMContentLoaded', () => {
