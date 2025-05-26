@@ -17,7 +17,25 @@
     <a id="logo" href="index.html"><img src="images/Design_logo.png" alt=""></a>
 
     <div class="hamburger" id="hamburger">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=stroke"> <g id="menu-fries"> <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 6C2.25 5.58579 2.58579 5.25 3 5.25H21C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H3C2.58579 6.75 2.25 6.41421 2.25 6Z" fill="#000000"></path> <path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12C8.25 11.5858 8.58579 11.25 9 11.25L21 11.25C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75L9 12.75C8.58579 12.75 8.25 12.4142 8.25 12Z" fill="#000000"></path> <path id="vector (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 18C2.25 17.5858 2.58579 17.25 3 17.25H21C21.4142 17.25 21.75 17.5858 21.75 18C21.75 18.4142 21.4142 18.75 21 18.75H3C2.58579 18.75 2.25 18.4142 2.25 18Z" fill="#000000"></path> </g> </g> </g></svg>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g id="style=stroke">
+            <g id="menu-fries">
+              <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.25 6C2.25 5.58579 2.58579 5.25 3 5.25H21C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H3C2.58579 6.75 2.25 6.41421 2.25 6Z"
+                fill="#000000"></path>
+              <path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.25 12C8.25 11.5858 8.58579 11.25 9 11.25L21 11.25C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75L9 12.75C8.58579 12.75 8.25 12.4142 8.25 12Z"
+                fill="#000000"></path>
+              <path id="vector (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.25 18C2.25 17.5858 2.58579 17.25 3 17.25H21C21.4142 17.25 21.75 17.5858 21.75 18C21.75 18.4142 21.4142 18.75 21 18.75H3C2.58579 18.75 2.25 18.4142 2.25 18Z"
+                fill="#000000"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
     </div>
 
     <div class="navmenu" id="navmenu">
@@ -79,10 +97,13 @@
       <div class="photo-grid">
 
         <div class='pixels-photo'>
-<a href='https://500px.com/photo/1112792805/fotoshoot-blue-and-milly-by-amy-bruyninckx' alt='Fotoshoot Blue &amp; Milly by Amy Bruyninckx on 500px.com'>
-  <img src='https://drscdn.500px.org/photo/1112792805/q%3D80_m%3D600/v2?sig=654d0e9840914ef5343b0cb0c30b7e520e08ad0c722181c31936f5dd3aaff60e' alt='Fotoshoot Blue &amp; Milly by Amy Bruyninckx on 500px.com' />
-</a>
-</div>
+          <a href='https://500px.com/photo/1112792805/fotoshoot-blue-and-milly-by-amy-bruyninckx'
+            alt='Fotoshoot Blue &amp; Milly by Amy Bruyninckx on 500px.com'>
+            <img
+              src='https://drscdn.500px.org/photo/1112792805/q%3D80_m%3D600/v2?sig=654d0e9840914ef5343b0cb0c30b7e520e08ad0c722181c31936f5dd3aaff60e'
+              alt='Fotoshoot Blue &amp; Milly by Amy Bruyninckx on 500px.com' />
+          </a>
+        </div>
 
 
         <div class="photo-item">
@@ -192,18 +213,55 @@
 
   <script>
 
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
-    const navmenu = document.getElementById("navmenu");
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.getElementById("hamburger");
+      const navmenu = document.getElementById("navmenu");
 
-    hamburger.addEventListener("click", () => {
+      hamburger.addEventListener("click", () => {
         if (navmenu.style.display === "flex") {
-            navmenu.style.display = "none";
+          navmenu.style.display = "none";
         } else {
-            navmenu.style.display = "flex";
+          navmenu.style.display = "flex";
         }
+      });
     });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.slider-row').forEach(row => {
+    const track     = row.querySelector('.slider-track');
+    const originals = Array.from(track.children);
+    const count     = originals.length;
+
+    // infinite-loop clones
+    originals.forEach(el => track.append(el.cloneNode(true)));
+
+    // bereken slide-breedte incl. marge
+    const style   = getComputedStyle(originals[0]);
+    const w       = originals[0].getBoundingClientRect().width;
+    const ml      = parseFloat(style.marginLeft);
+    const mr      = parseFloat(style.marginRight);
+    const slideW  = w + ml + mr;
+    const resetAt = slideW * count;
+
+    let offset = 0;
+    const speed   = 0.5; 
+    const reverse = row.classList.contains('small');
+
+    function loop() {
+      offset = (offset + speed) % resetAt;
+      if (reverse) {
+        // eerst flip de track, daarna translate; in combinatie met
+        // de omgedraaide plaatjes (CSS) scrollt het naar rechts
+        track.style.transform = `scaleX(-1) translateX(${-offset}px)`;
+      } else {
+        track.style.transform = `translateX(${-offset}px)`;
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
+  });
 });
+
     /*// streepje onder actieve pagina
      document.addEventListener('DOMContentLoaded', () => {
          const path = window.location.pathname;
@@ -219,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   </script>
 
-<script type='text/javascript' src='https://500px.com/embed.js'></script>
+  <script type='text/javascript' src='https://500px.com/embed.js'></script>
 
 </body>
 

@@ -609,7 +609,7 @@ p {
     text-decoration: none;
 }
 
-/*----------------------------------------------------------------*/
+/*================================================================================ PHOTOGRAPHY ============================================================================*/
 
 #logo img {
     width: 120px;
@@ -633,43 +633,51 @@ p {
     height: 950px;
 }
 
+
+/*------------------ LANDSCAPE ------------------- */
 .slider {
-    width: 100%;
-    margin: 10 auto;
-    overflow: hidden;
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.slider h2 {
+  text-align: center;
+  margin: 5% 0;
 }
 
-.slider img {
-    border-radius: 8px;
-}
-
-.slider h1 {
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
-
+/* Mask & flex-track */
 .slider-row {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 45px 0;             /* extra padding tussen rijen */
 }
-
 .slider-row .slider-track {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  display: flex;
+  will-change: transform;
+  justify-content: flex-start; /* items vanaf links */
 }
 
-.slider-row img {
-    width: 19%;
-    margin: 2% 5px;
+/* 1) “Gewone” rijen — 2 per view op mobiel, loop door alle images */
+.slider-row:not(.small) .slider-track img {
+  flex: none;
+  width: calc(50% - 10px);
+  margin: 0 5px;
+  border-radius: 8px;
+  height: auto;
 }
 
-.slider-row.small img {
-    width: calc(93% / 6);
-    margin: 0 5px;
+/* 2) “Small” rij — 3 per view op mobiel, loop door alle 6 images */
+.slider-row.small .slider-track img {
+  flex: none;
+  width: calc(33.33% - 10px);
+  margin: 0 5px;
+  border-radius: 8px;
+  height: auto;
+  transform: scaleX(-1);
 }
+
+/*------------------ PORTRAITS ------------------- */
 
 .collage {
     display: flex;
@@ -1197,6 +1205,10 @@ footer p {
     .pet {
         height: 600px;
     }
+
+    .slider-track img {
+    flex: 0 0 19%;    /* terug naar ~5 afbeeldingen per view op grotere schermen */
+  }
 }
 
 
