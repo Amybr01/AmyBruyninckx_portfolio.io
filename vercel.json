@@ -1,9 +1,12 @@
 {
   "headers": [
     {
-      "source": "/(.*\\.(png|jpe?g|gif|svg))",
+      "source": "^/.*\\.(png|jpe?g|gif|svg)$",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noimageindex" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noimageindex"
+        }
       ]
     }
   ]
