@@ -96,7 +96,7 @@ body {
 
 #logo {
     width: 95px;
-    height: 50px;
+    height: 48px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -112,6 +112,7 @@ body {
 }
 
 
+/*
 #logo {
     outline: 2px solid hotpink;
 }
@@ -119,10 +120,7 @@ body {
 .hamburger {
     outline: 2px solid lightgreen;
 }
-
-.navbar {
-    outline: 2px solid blue;
-}
+*/
 
 
 
