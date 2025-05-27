@@ -54,12 +54,12 @@ body {
     flex-direction: column;
     background-color: #f3ede7;
     position: absolute;
-    top: 90px;
+    top: 85px;
     left: 0;
     right: 0;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    
     z-index: 101;
 }
 
@@ -84,8 +84,8 @@ body {
 .navmenu #btn-in {
     display: block;
     background-color: #c5cfb8;
-    padding: 10px 15px;
-    border-radius: 16px;
+    padding: 12px 10px;
+    border-radius: 32px;
     text-decoration: none;
     color: #333;
     margin-bottom: 8px;
@@ -113,16 +113,11 @@ body {
 
 
 /*
-#logo {
-    outline: 2px solid hotpink;
-}
 
-.hamburger {
-    outline: 2px solid lightgreen;
-}
+#logo { outline: 2px solid hotpink; }
+.hamburger { outline: 2px solid lightgreen; }
+.navbar   { outline: 2px solid blue; }
 */
-
-
 
 
 /*----------------- HEADER ----------------------*/
@@ -132,7 +127,7 @@ header {
     position: relative;
     padding: 0;
     text-align: center;
-    margin-top: 88px;
+    margin-top: 86px;
 
 }
 
