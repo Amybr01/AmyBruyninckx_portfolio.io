@@ -112,8 +112,8 @@ body {
 }
 
 
-
 /*
+
 #logo {
     outline: 2px solid hotpink;
 }
@@ -561,27 +561,27 @@ h2 {
 }
 
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    width: 300px;
-    height: 320px;
-    overflow: hidden;
-    transition: height 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
 .project img {
-    max-height: 270px;
-    max-width: 270px;
-    object-fit: contain;
+    height: 270px;
+    width: 270px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
 .project h3 {
-    margin: 16px 0 8px;
+    margin: 5px 0 8px;
     color: #333;
     text-decoration: none;
     font-weight: 600;
@@ -600,7 +600,7 @@ h2 {
 }
 
 .project:hover {
-    height: 450px;
+    height: 500px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1020,6 +1020,9 @@ footer p {
         padding: 0;
         position: static;
         white-space: nowrap;
+            margin-left: 3%;
+
+
     }
 
     .navbar .navmenu #btn-in {
@@ -1034,6 +1037,8 @@ footer p {
         line-height: 1;
         transition: color 0.3s ease,
             transform 0.2s ease;
+      
+        
     }
 
     .navbar .navmenu a:hover {
@@ -1061,8 +1066,8 @@ footer p {
         transform: translateY(-2px);
     }
 
-    /*
-   .navbar {
+    
+  /* .navbar {
     outline: 2px solid blue;
   }
   .navbar .navmenu {
