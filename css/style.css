@@ -535,19 +535,17 @@ h2 {
 /*================================================================================ PROJECTS ============================================================================*/
 
 .design {
-    margin: 10% 5%;
+    margin: 25% 5% 15% 5%;
     text-align: center;
 }
 
-.design h2 {
+
+.design h3 {
     font-size: 20px;
     font-weight: 400;
     margin: 50px 0px;
 }
 
-.design h1 {
-    padding-top: 40px;
-}
 
 .project-container {
     display: flex;
@@ -582,8 +580,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-.project h2 {
-    margin-top: 10px;
+.project h3 {
+    margin: 16px 0 8px;
     color: #333;
     text-decoration: none;
     font-weight: 600;
@@ -592,17 +590,17 @@ h2 {
 .project-description {
     font-size: 1rem;
     color: #666;
-    margin: 10px 0;
 }
 
 .project-skills {
     font-size: 0.9rem;
     color: #555;
     font-style: italic;
+    margin: 5px 0;
 }
 
 .project:hover {
-    height: 500px;
+    height: 450px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -634,8 +632,11 @@ h2 {
     padding-top: 40px;
 }
 
-.pet p {
+.pet h3 {
     margin: 0 32px;
+font-size: 20px;
+    font-weight: 400;
+    margin: 50px 0px;
 }
 
 a,
@@ -1304,6 +1305,45 @@ footer p {
     }
 
 
+    /*----------------------------------------------------------------------*/
+
+    .design {
+        margin: 15% 5% 15% 5%;
+
+    }
+
+    .design h3 {
+        font-size: 22px;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 32px;
+
+    }
+
+    .project-container-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+
+    .project {
+        width: 300px;
+
+    }
+
+    .pet h3 {
+        font-size: 22px;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 32px;
+
+    }
+
+
+
 
 }
 
@@ -1337,7 +1377,7 @@ footer p {
     }
 
 
-    
+
     .navbar .navmenu a {
         font-size: 20px;
     }
@@ -1561,14 +1601,34 @@ footer p {
 
     /*============================================================*/
 
+    .design {
+        margin: 10% 5% 8% 5%;
+    }
+
+    .design h3 {
+        font-size: 24px;
+
+
+        margin-bottom: 48px;
+    }
+
+    .project-container-inner {
+        gap: 50px;
+
+    }
+
 
     .pet {
-        height: 800px;
+        height: 850px;
     }
 
     .pet h2 {
         padding-top: 100px;
         padding-bottom: 20px;
+    }
+
+    .pet h3{
+        font-size: 24px;
     }
 
     .footer {
@@ -1636,11 +1696,11 @@ body.photography .hamburger {
     }
 
 
-body.photography .navbar {
+    body.photography .navbar {
 
-    padding-left: 25px;
-    padding-right: 25px;
-}
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
 }
 
@@ -1657,17 +1717,17 @@ body.photography .navbar {
         width: 125px !important;
         height: auto !important;
         max-width: none !important;
-       
+
 
     }
 
     body.photography .navbar {
 
-    padding-left: 48px;
-    padding-right: 48px;
-}
+        padding-left: 48px;
+        padding-right: 48px;
+    }
 
-    
+
 }
 
 
