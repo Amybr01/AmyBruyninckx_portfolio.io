@@ -925,21 +925,21 @@ p {
 
 footer {
     background-color: #c5cfb8;
-    padding: 20px;
+    padding: 20px 10%;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     bottom: 0;
-    padding: 20px 10%;
-
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 42px;
+     margin-top: 16px;
+    /* op mobiel is er geen extra top‐padding */
 }
 
 .tiny-nav {
@@ -952,10 +952,13 @@ footer {
 .tiny-nav a {
     text-decoration: none;
     color: #333;
+    font-size: 16px; 
+    
 }
 
 .tiny-nav a:hover {
-    scale: 1.2;
+    opacity: 0.8; 
+    color: #d2784b;
 }
 
 .social-icons {
@@ -965,33 +968,45 @@ footer {
 }
 
 .social-icons svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    
 }
 
 .social-icons svg:hover {
-    width: 35px;
-    height: 35px;
+    opacity: 0.8;
+    
 }
 
 footer p {
     margin: 5px 0;
 }
 
+.footer-username {
+    position: relative;
+    display: inline-block;
+    font-size: 16px; 
+    color: #333;
+    margin: 0 auto;
+    line-height: 1;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-username::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;           /* exact boven de tekst */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;           /* mobiele breedte voor giraffe */
+    height: 120px;          /* mobiele hoogte voor giraffe */
+    background-image: url("../images/giraff.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1;
+}
 
 
 
@@ -1457,6 +1472,72 @@ footer p {
         margin-bottom: 32px;
 
     }
+/*----------------------------------------------------------------------*/
+     footer {
+        
+        padding: 20px 10%;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        bottom: 0;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-top: 20px; /* tekst en iconen iets naar beneden */
+    }
+
+    .tiny-nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px; /* gelijke grootte als tablet/nav */
+    }
+
+    .tiny-nav a:hover {
+        opacity: 0.8;
+    }
+   .social-icons {
+        gap: 8px;
+    }
+    .social-icons svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icons svg:hover {
+        opacity: 0.8;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    .footer-username {
+        position: relative;
+        display: inline-block;
+        font-size: 18px; 
+       
+        margin: 0 auto;
+    
+        padding-top: 20px;
+        padding-bottom: 12px;
+    }
+
+    .footer-username::before {
+        
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px; 
+        height: 250px; 
+        background-position: center bottom;
+       
+
+    }
 
 
 
@@ -1740,14 +1821,54 @@ footer p {
         font-size: 24px;
     }
 
-    .footer {
-        margin-top: 290px;
+     /*============================================================*/
+  footer {
+      
+        padding: 40px 10%;
+      
     }
 
-    .footer-container a {
-        font-size: 24px;
+    .footer-container {
+       
+        margin-bottom: 20px;
+        padding-top: 10px; 
+    }
+
+    .tiny-nav a {
+        font-size: 20px; 
+        margin-top: 12px;
+    }
+
+    .social-icons {
+        gap: 18px;
+    }
+
+ 
+    .social-icons svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-username {
+        font-size: 20px; 
+        color: #333;
+        padding-top: 20px;
+    }
+
+    .footer-username::before {
+      
+        width: 400px;  /* grootste giraffe voor web */
+        height: 160px; /* passend bij breedte */
+       
+        background-position: center bottom;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 1;
+        margin-top: 20px;
     }
 }
+
+
 
 
 /* ==================================================
